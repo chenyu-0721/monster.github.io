@@ -12,6 +12,7 @@ const app = Vue.createApp({
       logMessages: [],
       img1: "capoo1.png",
       img2: "rabbit.png",
+      win: "",
     };
   },
   computed: {
@@ -41,6 +42,7 @@ const app = Vue.createApp({
         this.winner = "monster";
         this.img1 = "capoo5.jpg";
         this.img2 = "rabbit4.png";
+        this.win = "Rabbit Win";
       }
     },
     monsterHealth(value) {
@@ -52,6 +54,7 @@ const app = Vue.createApp({
         this.winner = "player";
         this.img1 = "capoo6.png";
         this.img2 = "rabbit5.png";
+        this.win = "Capoo Win";
       }
     },
   },
@@ -105,6 +108,7 @@ const app = Vue.createApp({
       this.winner = "monster";
       this.img1 = "capoo5.jpg";
       this.img2 = "rabbit4.png";
+      this.win = "Rabbit Win";
     },
     addLogMessage(who, what, value) {
       this.logMessages.unshift({

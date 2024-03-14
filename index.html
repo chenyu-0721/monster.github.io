@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vue Basics</title>
+  <title>Capoo vs Rabbit </title>
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <script src="https://unpkg.com/vue@3.4.9/dist/vue.global.js" defer></script>
@@ -13,28 +13,26 @@
 
 <body>
   <header>
-    <h1>Monster Slayer</h1>
+    <h1>Capoo VS Rabbit </h1>
   </header>
   <div id="game">
     <div id="monster" class="capooPlay">
       <div class="healthbar">
         <div class="healthbar__value" :style="monsterBarStyles"></div>
       </div>
-      <img :src="img1" height=300 />
+      <img :src="img2" height=300 />
     </div>
 
     <div id="player" class="rabbit">
       <div class="healthbar">
         <div class="healthbar__value" :style="playerBarStyles"></div>
       </div>
-      <img :src="img2" height=300 />
+      <img :src="img1" height=300 />
     </div>
 
     <div class="gameover" v-if="winner">
       <h2>Game Over!</h2>
-      <h3 v-if="winner === 'monster'">You lost!</h3>
-      <h3 v-else-if="winner === 'player'">You won!</h3>
-      <h3 v-else>It's a draw!</h3>
+      <h2>{{ win }}</h2>
       <button @click="startGame">Start New Game</button>
     </div>
     <div class="attack" id="controls" v-else>
