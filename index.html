@@ -16,34 +16,36 @@
     <h1>Monster Slayer</h1>
   </header>
   <div id="game">
-    <section id="monster" class="container">
-      <h2>Monster Health</h2>
+    <div id="monster" class="capooPlay">
       <div class="healthbar">
         <div class="healthbar__value" :style="monsterBarStyles"></div>
       </div>
-    </section>
-    <section id="player" class="container">
-      <h2>Your Health</h2>
+      <img :src="img1" height=300 />
+    </div>
+
+    <div id="player" class="rabbit">
       <div class="healthbar">
         <div class="healthbar__value" :style="playerBarStyles"></div>
       </div>
-    </section>
-    <section class="container" v-if="winner">
+      <img :src="img2" height=300 />
+    </div>
+
+    <div class="gameover" v-if="winner">
       <h2>Game Over!</h2>
       <h3 v-if="winner === 'monster'">You lost!</h3>
       <h3 v-else-if="winner === 'player'">You won!</h3>
       <h3 v-else>It's a draw!</h3>
       <button @click="startGame">Start New Game</button>
-    </section>
-    <section id="controls" v-else>
+    </div>
+    <div class="attack" id="controls" v-else>
       <button @click="attackMonster">ATTACK</button>
       <button :disabled="mayUseSpecialAttack" @click="specialAttackMonster">
         SPECIAL ATTACK
       </button>
       <button @click="healPlayer">HEAL</button>
       <button @click="surrender">SURRENDER</button>
-    </section>
-    <section id="log" class="container">
+    </div>
+    <section id="log" class="log">
       <h2>Battle Log</h2>
       <ul>
         <li v-for="logMessage in logMessages">

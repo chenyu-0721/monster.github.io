@@ -3,7 +3,7 @@
 }
 
 html {
-  font-family: 'Jost', sans-serif;
+  font-family: "Jost", sans-serif;
 }
 
 body {
@@ -45,6 +45,69 @@ section {
   margin: 1rem auto;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   border-radius: 12px;
+  width: 90%;
+  max-width: 40rem;
+  margin: auto;
+}
+
+.capooPlay {
+  text-align: center;
+  padding: 0.5rem;
+  margin: 1rem auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 12px;
+  width: 90%;
+  max-width: 40rem;
+  margin: auto;
+  position: absolute;
+  left: 15%;
+  top: 10%;
+}
+
+.rabbit {
+  text-align: center;
+  padding: 0.5rem;
+  margin: 1rem auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 12px;
+  width: 90%;
+  max-width: 40rem;
+  margin: auto;
+  position: absolute;
+  right: 14%;
+  top: 10%;
+}
+
+.attack {
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  margin: auto;
+  position: absolute;
+  right: 34%;
+  top: 45%;
+}
+
+.log {
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  margin: auto;
+  position: absolute;
+  right: 38%;
+  top: 64%;
+}
+
+.gameover {
+  text-align: center;
+  padding: 0.5rem;
+  margin: 1rem auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 12px;
+  width: 90%;
+  max-width: 40rem;
+  margin: auto;
+  position: absolute;
+  right: 38%;
+  top: 45%;
 }
 
 #monster h2,
