@@ -72,7 +72,7 @@ const app = Vue.createApp({
       this.currentRound++;
       const attackValue = getRandomValue(5, 12);
       this.monsterHealth -= attackValue;
-      this.addLogMessage("player", "attack", attackValue);
+      this.addLogMessage("Capoo", "attack", attackValue);
       this.attackPlayer();
       this.img1 = "capoo2.jpg";
       this.img2 = "rabbit2.jpg";
@@ -80,13 +80,13 @@ const app = Vue.createApp({
     attackPlayer() {
       const attackValue = getRandomValue(8, 15);
       this.playerHealth -= attackValue;
-      this.addLogMessage("monster", "attack", attackValue);
+      this.addLogMessage("Rabbit", "attack", attackValue);
     },
     specialAttackMonster() {
       this.currentRound++;
       const attackValue = getRandomValue(10, 25);
       this.monsterHealth -= attackValue;
-      this.addLogMessage("player", "attack", attackValue);
+      this.addLogMessage("Capoo", "attack", attackValue);
       this.attackPlayer();
       this.img1 = "capoo3.jpg";
       this.img2 = "rabbit3.png";
@@ -99,7 +99,7 @@ const app = Vue.createApp({
       } else {
         this.playerHealth += healValue;
       }
-      this.addLogMessage("player", "heal", healValue);
+      this.addLogMessage("Capoo", "heal", healValue);
       this.attackPlayer();
       this.img1 = "capoo4.png";
       this.img2 = "rabbit2.jpg";

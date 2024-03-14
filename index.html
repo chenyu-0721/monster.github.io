@@ -48,8 +48,8 @@
       <ul>
         <li v-for="logMessage in logMessages">
           <span
-            :class="{'log--player': logMessage.actionBy === 'player', 'log--monster': logMessage.actionBy === 'monster'}">{{
-            logMessage.actionBy === 'player' ? 'Player' : 'Monster'
+            :class="{'log--player': logMessage.actionBy === 'Capoo', 'log--monster': logMessage.actionBy === 'Rabbit'}">{{
+            logMessage.actionBy === 'Capoo' ? 'Capoo' : 'Rabbit'
             }}</span>
           <span v-if="logMessage.actionType === 'heal'">
             heals himself for
