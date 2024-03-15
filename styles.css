@@ -50,7 +50,7 @@ section {
   margin: auto;
 }
 
-.capooPlay {
+.rabbit {
   text-align: center;
   padding: 0.5rem;
   margin: 1rem auto;
@@ -64,7 +64,7 @@ section {
   top: 10%;
 }
 
-.rabbit {
+.Capoo {
   text-align: center;
   padding: 0.5rem;
   margin: 1rem auto;
@@ -80,11 +80,16 @@ section {
 
 .attack {
   text-align: center;
+  padding: 0.5rem;
+  margin: 1rem auto;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 12px;
+  width: 90%;
+  max-width: 40rem;
   margin: auto;
   position: absolute;
-  right: 34%;
-  top: 45%;
+  right: 35%;
+  top: 55%;
 }
 
 .log {
@@ -92,8 +97,8 @@ section {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   margin: auto;
   position: absolute;
-  right: 38%;
-  top: 64%;
+  right: 35%;
+  top: 80%;
 }
 
 .gameover {
@@ -106,8 +111,49 @@ section {
   max-width: 40rem;
   margin: auto;
   position: absolute;
-  right: 38%;
-  top: 45%;
+  right: 35%;
+  top: 55%;
+}
+
+.img {
+  width: 60%;
+  height: 300px;
+}
+
+@media (max-width: 768px) {
+  .Capoo {
+    left: 5%;
+    width: 40%;
+    height: 20%;
+  }
+
+  .rabbit {
+    right: 5%;
+    width: 40%;
+    height: 20%;
+  }
+
+  .attack {
+    right: 5%;
+    top: 35%;
+  }
+
+  .gameover {
+    right: 5%;
+    top: 35%;
+  }
+
+  .img {
+    width: 40%;
+    height: 50%;
+    right: 35%;
+    top: 55%;
+  }
+
+  .log {
+    right: 5%;
+    top: 60%;
+  }
 }
 
 #monster h2,
@@ -142,8 +188,8 @@ button:focus {
 
 button:hover,
 button:active {
-  background-color: #af0a78;
-  border-color: #af0a78;
+  background-color: skyblue;
+  border-color: skyblue;
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.26);
 }
 
@@ -166,11 +212,11 @@ button:disabled {
 }
 
 .log--player {
-  color: #7700ff;
+  color: rgb(68, 179, 223);
 }
 
 .log--monster {
-  color: #da8d00;
+  color: rgb(206, 89, 108);
 }
 
 .log--damage {
@@ -178,5 +224,5 @@ button:disabled {
 }
 
 .log--heal {
-  color: green;
+  color: red;
 }

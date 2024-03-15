@@ -16,19 +16,23 @@
     <h1>Capoo VS Rabbit </h1>
   </header>
   <div id="game">
-    <div id="monster" class="capooPlay">
-      <div class="healthbar">
-        <div class="healthbar__value" :style="monsterBarStyles"></div>
-      </div>
-      <img :src="img2" height=300 />
-    </div>
 
-    <div id="player" class="rabbit">
+
+    <div id="player" class="Capoo">
       <div class="healthbar">
         <div class="healthbar__value" :style="playerBarStyles"></div>
       </div>
-      <img :src="img1" height=300 />
+      <img :src="img1" class="img" />
     </div>
+
+    <div id="monster" class="rabbit">
+      <div class="healthbar">
+        <div class="healthbar__value" :style="monsterBarStyles"></div>
+      </div>
+      <img :src="img2" class="img " />
+    </div>
+
+
 
     <div class="gameover" v-if="winner">
       <h2>Game Over!</h2>
