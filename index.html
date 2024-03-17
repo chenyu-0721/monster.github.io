@@ -15,45 +15,50 @@
   <header>
     <h1>Capoo VS Rabbit </h1>
   </header>
-  <div id="game">
 
+  <div id="game" class="">
 
-    <div id="player" class="Capoo">
-      <div class="healthbar">
-        <div class="healthbar__value" :style="playerBarStyles"></div>
+    <div class="container">
+      <div id="player" class="Capoo">
+        <div class="healthbar">
+          <div class="healthbar__value" :style="playerBarStyles"></div>
+        </div>
+        <img :src="img1" class="img" />
       </div>
-      <img :src="img1" class="img" />
-    </div>
 
-    <div id="monster" class="rabbit">
-      <div class="healthbar">
-        <div class="healthbar__value" :style="monsterBarStyles"></div>
+      <div id="monster" class="rabbit">
+        <div class="healthbar">
+          <div class="healthbar__value" :style="monsterBarStyles"></div>
+        </div>
+        <img :src="img2" class="img" />
       </div>
-      <img :src="img2" class="img " />
     </div>
 
+    <div class="container">
+      <div class="gameover" v-if="winner">
+        <h2>遊戲結束</h2>
+        <h2>{{ win }}</h2>
+        <button @click="startGame">重新開始</button>
+      </div>
 
+      <div class="attack" id="controls" v-else>
+        <button @click="attackMonster">水汪汪眼睛攻擊</button>
+        <button :disabled="mayUseSpecialAttack" @click="specialAttackMonster">
+          破壞死光
+        </button>
+        <button @click="healPlayer">補充小雞能量</button>
+        <button @click="surrender">認輸</button>
+      </div>
 
-    <div class="gameover" v-if="winner">
-      <h2>Game Over!</h2>
-      <h2>{{ win }}</h2>
-      <button @click="startGame">Start New Game</button>
     </div>
-    <div class="attack" id="controls" v-else>
-      <button @click="attackMonster">ATTACK</button>
-      <button :disabled="mayUseSpecialAttack" @click="specialAttackMonster">
-        SPECIAL ATTACK
-      </button>
-      <button @click="healPlayer">HEAL</button>
-      <button @click="surrender">SURRENDER</button>
-    </div>
+    
     <section id="log" class="log">
-      <h2>Battle Log</h2>
+      <h2>對戰訊息</h2>
       <ul>
         <li v-for="logMessage in logMessages">
           <span
             :class="{'log--player': logMessage.actionBy === 'Capoo', 'log--monster': logMessage.actionBy === 'Rabbit'}">{{
-            logMessage.actionBy === 'Capoo' ? 'Capoo' : 'Rabbit'
+            logMessage.actionBy === 'Capoo' ? '咖波' : '兔兔'
             }}</span>
           <span v-if="logMessage.actionType === 'heal'">
             heals himself for
@@ -66,6 +71,7 @@
       </ul>
     </section>
   </div>
+
 </body>
 
 </html>

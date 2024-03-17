@@ -40,42 +40,33 @@ section {
 }
 
 .container {
-  text-align: center;
-  padding: 0.5rem;
-  margin: 1rem auto;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  border-radius: 12px;
-  width: 90%;
-  max-width: 40rem;
-  margin: auto;
+  display: flex;
+  flex-direction: row;
 }
 
 .rabbit {
   text-align: center;
+  width: 100%;
+  max-width: 600px;
+  max-height: 800px;
+  margin: auto;
   padding: 0.5rem;
-  margin: 1rem auto;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   border-radius: 12px;
-  width: 90%;
-  max-width: 40rem;
-  margin: auto;
-  position: absolute;
-  right: 14%;
-  top: 10%;
+  position: static;
 }
 
 .Capoo {
   text-align: center;
+  width: 100%;
+  max-width: 600px;
+  max-height: 800px;
   padding: 0.5rem;
-  margin: 1rem auto;
+  margin: 1rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   border-radius: 12px;
-  width: 90%;
-  max-width: 40rem;
   margin: auto;
-  position: absolute;
-  left: 15%;
-  top: 10%;
+  position: relative;
 }
 
 .attack {
@@ -87,18 +78,16 @@ section {
   width: 90%;
   max-width: 40rem;
   margin: auto;
-  position: absolute;
-  right: 35%;
-  top: 55%;
+  position: relative;
+  top: 50px;
 }
 
 .log {
   text-align: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   margin: auto;
-  position: absolute;
-  right: 35%;
-  top: 80%;
+  position: relative;
+  top: 50px;
 }
 
 .gameover {
@@ -110,17 +99,17 @@ section {
   width: 90%;
   max-width: 40rem;
   margin: auto;
-  position: absolute;
-  right: 35%;
-  top: 55%;
+  position: relative;
+  top: 50px;
 }
 
 .img {
-  width: 60%;
-  height: 300px;
+  max-width: 100%;
+  height: auto;
 }
 
-@media (max-width: 768px) {
+/* 手機尺寸  */
+/* @media (min-width: 320px) and (max-width: 720px) {
   .Capoo {
     left: 5%;
     width: 40%;
@@ -154,7 +143,45 @@ section {
     right: 5%;
     top: 60%;
   }
-}
+} */
+
+/* 平板尺寸  */
+
+/* @media (min-width: 720px) and (max-width: 1024px) {
+  .Capoo {
+    left: 5%;
+    width: 40%;
+    height: 20%;
+  }
+
+  .rabbit {
+    right: 5%;
+    width: 40%;
+    height: 20%;
+  }
+
+  .attack {
+    right: 5%;
+    top: 35%;
+  }
+
+  .gameover {
+    right: 5%;
+    top: 35%;
+  }
+
+  .img {
+    width: 40%;
+    height: 50%;
+    right: 35%;
+    top: 55%;
+  }
+
+  .log {
+    right: 5%;
+    top: 60%;
+  }
+} */
 
 #monster h2,
 #player h2 {

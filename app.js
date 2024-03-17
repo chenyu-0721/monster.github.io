@@ -40,7 +40,7 @@ const app = Vue.createApp({
       } else if (value <= 0) {
         // Player lost
         this.winner = "monster";
-        this.img1 = "capoo5.jpg";
+        this.img1 = "capoo5.png";
         this.img2 = "rabbit4.png";
         this.win = "Rabbit Win";
       }
@@ -74,8 +74,8 @@ const app = Vue.createApp({
       this.monsterHealth -= attackValue;
       this.addLogMessage("Capoo", "attack", attackValue);
       this.attackPlayer();
-      this.img1 = "capoo2.jpg";
-      this.img2 = "rabbit2.jpg";
+      this.img1 = "capoo2.png";
+      this.img2 = "rabbit2.png";
     },
     attackPlayer() {
       const attackValue = getRandomValue(8, 15);
@@ -88,7 +88,7 @@ const app = Vue.createApp({
       this.monsterHealth -= attackValue;
       this.addLogMessage("Capoo", "attack", attackValue);
       this.attackPlayer();
-      this.img1 = "capoo3.jpg";
+      this.img1 = "capoo3.png";
       this.img2 = "rabbit3.png";
     },
     healPlayer() {
@@ -102,11 +102,11 @@ const app = Vue.createApp({
       this.addLogMessage("Capoo", "heal", healValue);
       this.attackPlayer();
       this.img1 = "capoo4.png";
-      this.img2 = "rabbit2.jpg";
+      this.img2 = "rabbit2.png";
     },
     surrender() {
       this.winner = "monster";
-      this.img1 = "capoo5.jpg";
+      this.img1 = "capoo5.png";
       this.img2 = "rabbit4.png";
       this.win = "Rabbit Win";
     },
