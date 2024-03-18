@@ -12,6 +12,8 @@ body {
   background-image: url("img/back.png");
   background-size: cover;
   background-position: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 header {
