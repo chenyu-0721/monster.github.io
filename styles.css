@@ -8,6 +8,10 @@ html {
 
 body {
   margin: 0;
+  background-color: rgb(56, 58, 175);
+  background-image: url("img/pokemon.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 header {
@@ -46,142 +50,98 @@ section {
 
 .rabbit {
   text-align: center;
-  width: 100%;
+  width: 30%;
   max-width: auto;
-  max-height: 800px;
-  margin: auto;
-  padding: 0.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  border-radius: 12px;
-  position: static;
+  max-height: 100px;
+  margin-top: 20px;
+  margin-left: 10px;
+  position: relative;
 }
 
 .Capoo {
   text-align: center;
-  width: 100%;
+  width: 30%;
   max-width: auto;
-  max-height: 800px;
-  padding: 0.5rem;
-  margin: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  border-radius: 12px;
-  margin: auto;
+  max-height: 100px;
+  margin-top: 20px;
+  margin-right: auto;
+  position: relative;
+}
+
+.round {
+  font-size: 40px;
+  text-align: center;
+  width: 30%;
+  max-width: auto;
+  max-height: auto;
+  margin-top: 28px;
+  margin-right: auto;
   position: relative;
 }
 
 .attack {
-  text-align: center;
+  text-align: justify;
   padding: 0.5rem;
-  margin: 1rem auto;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 2px 8px blue;
   border-radius: 12px;
-  width: 90%;
-  max-width: 40rem;
-  margin: auto;
+  width: 100%;
+  margin-top: 30%;
   position: relative;
-  top: 50px;
+  background: rgb(55, 56, 124);
+  opacity: 0.9;
 }
 
 .log {
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  margin: auto;
+  padding: 0.5rem;
+  box-shadow: 0 2px 8px blue;
+  border-radius: 12px;
+  width: 40%;
+  margin-top: 30%;
   position: relative;
-  top: 50px;
+  height: 488px;
+  overflow-y: auto;
+  font-size: 25px;
+  background: rgb(55, 56, 124);
+  opacity: 0.9;
+}
+
+h2 {
+  color: white;
+}
+
+span {
+  font-weight: bold;
+  color: white;
 }
 
 .gameover {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0.5rem;
-  margin: 1rem auto;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 2px 8px blue;
   border-radius: 12px;
-  width: 90%;
-  max-width: 40rem;
-  margin: auto;
+  width: 100%;
+  margin-top: 30%;
   position: relative;
-  top: 50px;
+  background: rgb(55, 56, 124);
+  opacity: 0.9;
+  font-size: 40px;
 }
 
-.img {
-  max-width: 100%;
+.img1 {
+  width: 100px;
+  max-width: 80%;
   height: auto;
 }
 
-/* 手機尺寸  */
-/* @media (min-width: 320px) and (max-width: 720px) {
-  .Capoo {
-    left: 5%;
-    width: 40%;
-    height: 20%;
-  }
-
-  .rabbit {
-    right: 5%;
-    width: 40%;
-    height: 20%;
-  }
-
-  .attack {
-    right: 5%;
-    top: 35%;
-  }
-
-  .gameover {
-    right: 5%;
-    top: 35%;
-  }
-
-  .img {
-    width: 40%;
-    height: 50%;
-    right: 35%;
-    top: 55%;
-  }
-
-  .log {
-    right: 5%;
-    top: 60%;
-  }
-} */
-
-/* 平板尺寸  */
-
-/* @media (min-width: 720px) and (max-width: 1024px) {
-  .Capoo {
-    left: 5%;
-    width: 40%;
-    height: 20%;
-  }
-
-  .rabbit {
-    right: 5%;
-    width: 40%;
-    height: 20%;
-  }
-
-  .attack {
-    right: 5%;
-    top: 35%;
-  }
-
-  .gameover {
-    right: 5%;
-    top: 35%;
-  }
-
-  .img {
-    width: 40%;
-    height: 50%;
-    right: 35%;
-    top: 55%;
-  }
-
-  .log {
-    right: 5%;
-    top: 60%;
-  }
-} */
+.img2 {
+  margin-top: 15%;
+  height: 100%;
+  max-width: 100%;
+  height: auto;
+}
 
 #monster h2,
 #player h2 {
@@ -196,17 +156,23 @@ section {
   justify-content: center;
 }
 
+.btnSize {
+  width: 20%;
+  height: auto;
+}
+
 button {
   font: inherit;
   border: 1px solid rgb(56, 58, 175);
-  background-color: rgb(56, 58, 175);
+  background-color: black;
   color: white;
   padding: 1rem 2rem;
   border-radius: 12px;
   margin: 1rem;
-  width: 12rem;
+  width: 20rem;
   cursor: pointer;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
+  font-size: 30px;
 }
 
 button:focus {
@@ -251,5 +217,5 @@ button:disabled {
 }
 
 .log--heal {
-  color: red;
+  color: green;
 }

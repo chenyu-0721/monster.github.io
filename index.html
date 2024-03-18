@@ -9,67 +9,78 @@
   <link rel="stylesheet" href="styles.css" />
   <script src="https://unpkg.com/vue@3.4.9/dist/vue.global.js" defer></script>
   <script src="app.js" defer></script>
+
+  <embed src="music/music.mp3" hidden="flase" autostart="true" loop="true">
 </head>
 
 <body>
-  <header>
-    <h1>Capoo VS Rabbit </h1>
-  </header>
+
 
   <div id="game" class="">
 
     <div class="container">
+      <img src="img/capoo1.png" class="img1" />
       <div id="player" class="Capoo">
         <div class="healthbar">
           <div class="healthbar__value" :style="playerBarStyles"></div>
         </div>
-        <img :src="img1" class="img" />
+        <img :src="img1" class="img2" />
       </div>
+
+      <div class="round">{{currentRound}}/15</div>
 
       <div id="monster" class="rabbit">
         <div class="healthbar">
           <div class="healthbar__value" :style="monsterBarStyles"></div>
         </div>
-        <img :src="img2" class="img" />
+        <img :src="img2" class="img2" />
       </div>
+      <img src="img/rabbit.png" class="img1" />
+
     </div>
 
+
     <div class="container">
+
+
+      <div id="log" class="log">
+        <h2>對戰訊息</h2>
+        <ul>
+          <li v-for="logMessage in logMessages">
+            <span
+              :class="{'log--player': logMessage.actionBy === 'Capoo', 'log--monster': logMessage.actionBy === 'Rabbit'}">{{
+              logMessage.actionBy === 'Capoo' ? '咖波' : '兔兔'
+              }}</span>
+            <span v-if="logMessage.actionType === 'heal'">
+              治癒自己
+              <span class="log--heal">{{ logMessage.actionValue }} 點生命</span></span>
+            <span v-else>
+              攻擊造成
+              <span class="log--damage">{{ logMessage.actionValue }} 點傷害</span>
+
+            </span>
+          </li>
+        </ul>
+      </div>
+
       <div class="gameover" v-if="winner">
-        <h2>遊戲結束</h2>
-        <h2>{{ win }}</h2>
-        <button @click="startGame">重新開始</button>
+        <button class="btnSize" @click="startGame">重新開始</button>
       </div>
 
       <div class="attack" id="controls" v-else>
+
         <button @click="attackMonster">水汪汪眼睛攻擊</button>
         <button :disabled="mayUseSpecialAttack" @click="specialAttackMonster">
           破壞死光
         </button>
+
         <button @click="healPlayer">補充小雞能量</button>
         <button @click="surrender">認輸</button>
       </div>
-
     </div>
-    
-    <section id="log" class="log">
-      <h2>對戰訊息</h2>
-      <ul>
-        <li v-for="logMessage in logMessages">
-          <span
-            :class="{'log--player': logMessage.actionBy === 'Capoo', 'log--monster': logMessage.actionBy === 'Rabbit'}">{{
-            logMessage.actionBy === 'Capoo' ? '咖波' : '兔兔'
-            }}</span>
-          <span v-if="logMessage.actionType === 'heal'">
-            heals himself for
-            <span class="log--heal">{{ logMessage.actionValue }}</span></span>
-          <span v-else>
-            attacks and deals
-            <span class="log--damage">{{ logMessage.actionValue }}</span>
-          </span>
-        </li>
-      </ul>
-    </section>
+
+
+
   </div>
 
 </body>
