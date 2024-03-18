@@ -9,11 +9,9 @@ html {
 body {
   margin: 0;
   background-color: rgb(56, 58, 175);
-  background-image: url("img/back.png");
+  background-image: url("img/back1.png");
   background-size: cover;
   background-position: center;
-  overflow-y: scroll;
-  overflow-x: hidden;
 }
 
 header {
@@ -50,6 +48,11 @@ section {
   flex-direction: row;
 }
 
+.container1 {
+  display: flex;
+  flex-direction: row;
+}
+
 .rabbit {
   text-align: center;
   width: 30%;
@@ -82,30 +85,29 @@ section {
 }
 
 .attack {
-  text-align: justify;
-  padding: 0.5rem;
   box-shadow: 0 2px 8px blue;
-  border-radius: 12px;
-  width: 100%;
-  margin-top: 30%;
-  position: relative;
   background: rgb(55, 56, 124);
+  border-radius: 12px;
+  text-align: center;
+  width: 70%;
   opacity: 0.9;
+  height: 450px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
 }
 
 .log {
-  text-align: center;
-  padding: 0.5rem;
   box-shadow: 0 2px 8px blue;
-  border-radius: 12px;
-  width: 40%;
-  margin-top: 30%;
-  position: relative;
-  height: 450px;
-  overflow-y: auto;
-  font-size: 25px;
   background: rgb(55, 56, 124);
+  border-radius: 12px;
+  text-align: center;
+  overflow-y: auto;
+  width: 30%;
+  height: 450px;
   opacity: 0.9;
+  position: fixed;
+  bottom: 0;
 }
 
 h2 {
@@ -220,16 +222,4 @@ button:disabled {
 
 .log--heal {
   color: green;
-}
-
-.footer {
-  padding: 10rem 3rem;
-  background-color: #37383d;
-}
-
-.footer__nav {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 5rem;
 }
