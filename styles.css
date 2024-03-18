@@ -221,3 +221,8 @@ button:disabled {
 .log--heal {
   color: green;
 }
+
+.footer {
+  padding: 10rem 3rem;
+  background-color: #37383d;
+}

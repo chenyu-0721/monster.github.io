@@ -41,9 +41,7 @@
 
 
     <div class="container">
-
-
-      <div id="log" class="log">
+      <!-- <div id="log" class="log">
         <h2>對戰訊息</h2>
         <ul>
           <li v-for="logMessage in logMessages">
@@ -57,7 +55,6 @@
             <span v-else>
               攻擊造成
               <span class="log--damage">{{ logMessage.actionValue }} 點傷害</span>
-
             </span>
           </li>
         </ul>
@@ -77,11 +74,50 @@
         <button @click="healPlayer">補充小雞能量</button>
         <button @click="surrender">認輸</button>
       </div>
+    </div> -->
+
     </div>
 
 
+    <footer class="nav">
+      <div class="container">
+        <div id="log" class="log">
+          <h2>對戰訊息</h2>
+          <ul>
+            <li v-for="logMessage in logMessages">
+              <span
+                :class="{'log--player': logMessage.actionBy === 'Capoo', 'log--monster': logMessage.actionBy === 'Rabbit'}">{{
+                logMessage.actionBy === 'Capoo' ? '咖波' : '兔兔'
+                }}</span>
+              <span v-if="logMessage.actionType === 'heal'">
+                治癒自己
+                <span class="log--heal">{{ logMessage.actionValue }} 點生命</span></span>
+              <span v-else>
+                攻擊造成
+                <span class="log--damage">{{ logMessage.actionValue }} 點傷害</span>
+              </span>
+            </li>
+          </ul>
+        </div>
 
-  </div>
+        <div class="gameover" v-if="winner">
+          <button class="btnSize" @click="startGame">重新開始</button>
+        </div>
+
+        <div class="attack" id="controls" v-else>
+
+          <button @click="attackMonster">水汪汪眼睛攻擊</button>
+          <button :disabled="mayUseSpecialAttack" @click="specialAttackMonster">
+            破壞死光
+          </button>
+
+          <button @click="healPlayer">補充小雞能量</button>
+          <button @click="surrender">認輸</button>
+        </div>
+      </div>
+    </footer>
+
+
 
 </body>
 
