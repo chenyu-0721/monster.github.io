@@ -9,7 +9,7 @@ html {
 body {
   margin: 0;
   background-color: rgb(56, 58, 175);
-  background-image: url("img/pokemon.jpg");
+  background-image: url("img/back.png");
   background-size: cover;
   background-position: center;
 }
