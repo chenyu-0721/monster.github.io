@@ -7,11 +7,11 @@ html {
 }
 
 body {
+  font-family: DFKai-sb;
   margin: 0;
   background-color: rgb(56, 58, 175);
   background-image: url("img/back1.png");
   background-size: cover;
-  background-position: center;
 }
 
 header {
@@ -29,140 +29,26 @@ section {
   margin: auto;
 }
 
-.healthbar {
-  width: 100%;
-  height: 40px;
-  border: 1px solid #575757;
-  margin: 1rem 0;
-  background: #fde5e5;
-}
-
-.healthbar__value {
-  background-color: skyblue;
-  width: 100%;
-  height: 100%;
-}
-
-.container {
-  display: flex;
-  flex-direction: row;
-}
-
-.container1 {
-  display: flex;
-  flex-direction: row;
-}
-
-.rabbit {
-  text-align: center;
-  width: 30%;
-  max-width: auto;
-  max-height: 100px;
-  margin-top: 20px;
-  margin-left: 10px;
-  position: relative;
-}
-
-.Capoo {
-  text-align: center;
-  width: 30%;
-  max-width: auto;
-  max-height: 100px;
-  margin-top: 20px;
-  margin-right: auto;
-  position: relative;
-}
-
-.round {
-  font-size: 40px;
-  text-align: center;
-  width: 30%;
-  max-width: auto;
-  max-height: auto;
-  margin-top: 28px;
-  margin-right: auto;
-  position: relative;
-}
-
-.attack {
-  box-shadow: 0 2px 8px blue;
-  background: rgb(55, 56, 124);
-  border-radius: 12px;
-  text-align: center;
-  width: 70%;
-  opacity: 0.9;
-  height: 450px;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-}
-
-.log {
-  box-shadow: 0 2px 8px blue;
-  background: rgb(55, 56, 124);
-  border-radius: 12px;
-  text-align: center;
-  overflow-y: auto;
-  width: 30%;
-  height: 450px;
-  opacity: 0.9;
-  position: fixed;
-  bottom: 0;
-}
-
 h2 {
+  font-size: 50px;
   color: white;
+  border-bottom: 5px solid white;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 span {
   font-weight: bold;
   color: white;
+  font-size: 30px;
 }
 
-.gameover {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5rem;
-  box-shadow: 0 2px 8px blue;
-  border-radius: 12px;
-  width: 100%;
-  margin-top: 30%;
-  position: relative;
-  background: rgb(55, 56, 124);
-  opacity: 0.9;
-  font-size: 40px;
-}
-
-.img1 {
-  width: 100px;
-  max-width: 80%;
-  height: auto;
-}
-
-.img2 {
-  margin-top: 15%;
-  height: 100%;
-  max-width: 100%;
-  height: auto;
-}
-
-#monster h2,
-#player h2 {
-  margin: 0.25rem;
-}
-
-#controls {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-
-.btnSize {
-  width: 20%;
-  height: auto;
+dialog {
+  text-align: center;
+  top: 30%;
+  width: 30%;
+  max-width: auto;
+  max-height: auto;
 }
 
 button {
@@ -170,10 +56,13 @@ button {
   border: 1px solid rgb(56, 58, 175);
   background-color: black;
   color: white;
-  padding: 1rem 2rem;
+  padding: 3rem 2rem;
   border-radius: 12px;
-  margin: 1rem;
-  width: 20rem;
+  margin-left: 10px;
+  text-align: center;
+  width: 20%;
+  height: 20%;
+  max-width: 40%;
   cursor: pointer;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
   font-size: 30px;
@@ -198,22 +87,163 @@ button:disabled {
   cursor: not-allowed;
 }
 
+.gameover {
+  box-shadow: 0 2px 8px blue;
+  background: rgb(55, 56, 124);
+  border-radius: 12px;
+  width: 60%;
+  opacity: 0.9;
+  height: auto;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img1 {
+  width: 150px;
+  max-width: 80%;
+  height: auto;
+  top: 5%;
+  position: absolute;
+  z-index: 1;
+}
+
+.img2 {
+  max-width: 100%;
+  margin-top: 10%;
+  margin-left: 150px;
+  height: 300px;
+}
+
+.img3 {
+  width: 150px;
+  max-width: 80%;
+  height: auto;
+  top: 3%;
+  right: 1px;
+  position: absolute;
+  z-index: 1;
+}
+
+#monster h2,
+#player h2 {
+  margin: 0.25rem;
+}
+
+#controls {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnSize {
+  width: 60%;
+}
+
+.healthbar {
+  width: 100%;
+  height: 40px;
+  margin-top: 60px;
+  border: 1px solid #575757;
+  margin-left: 80px;
+  background: #fde5e5;
+}
+
+.healthbar__value {
+  background-color: skyblue;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.container1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.rabbit {
+  text-align: left;
+  width: 30%;
+  max-width: auto;
+  max-height: 100px;
+  margin-top: 60px;
+  margin-right: 130px;
+  position: relative;
+}
+
+.Capoo {
+  text-align: right;
+  width: 30%;
+  max-width: auto;
+  max-height: 100px;
+  margin-top: 60px;
+  margin-right: auto;
+  position: relative;
+}
+
+.round {
+  font-size: 60px;
+  text-align: center;
+  width: 30%;
+  max-width: auto;
+  max-height: auto;
+  margin-top: 60px;
+  margin-left: 150px;
+  margin-right: auto;
+  position: relative;
+}
+
+.attack {
+  box-shadow: 0 2px 8px white;
+  background: rgb(55, 56, 124);
+  border-radius: 12px;
+  text-align: center;
+  width: 60%;
+
+  opacity: 0.9;
+  height: auto;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.log {
+  border: 10px solid white;
+  box-shadow: 0 3px 15px blue;
+  background: rgb(55, 56, 124);
+  border-radius: 20px;
+  text-align: center;
+  overflow-y: auto;
+  width: 40%;
+  height: auto;
+  max-height: 400px;
+  opacity: 0.9;
+  position: fixed;
+  bottom: 0;
+}
+
 #log ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  text-align: left;
 }
 
 #log li {
-  margin: 0.5rem 0;
+  margin: 0.3rem 0;
 }
 
-.log--player {
-  color: rgb(68, 179, 223);
-}
-
-.log--monster {
-  color: rgb(206, 89, 108);
+.log--player .log--monster {
+  color: white;
 }
 
 .log--damage {
@@ -221,5 +251,5 @@ button:disabled {
 }
 
 .log--heal {
-  color: green;
+  color: yellow;
 }

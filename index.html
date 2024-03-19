@@ -35,12 +35,12 @@
         </div>
         <img :src="img2" class="img2" />
       </div>
-      <img src="img/rabbit.png" class="img1" />
+      <img src="img/rabbit.png" class="img3" />
 
     </div>
 
 
-    <div class="container1">
+    <div class="container">
 
       <div id="log" class="log">
         <h2>對戰訊息</h2>
@@ -50,34 +50,65 @@
               :class="{'log--player': logMessage.actionBy === 'Capoo', 'log--monster': logMessage.actionBy === 'Rabbit'}">{{
               logMessage.actionBy === 'Capoo' ? '咖波' : '兔兔'
               }}</span>
-            <span v-if="logMessage.actionType === 'heal'">
-              治癒自己
+            <span style="color:greenyellow" v-if="logMessage.actionType === 'heal'">
+              <span style="color: white;" class="log--heal"> 使用</span>
+              {{logMessage.actionBy === 'Capoo' ? '[小雞能量]' : '[罵人]' }}
+              <span style="color: white;" class="log--heal">治癒自己 </span>
               <span class="log--heal">{{ logMessage.actionValue }} 點生命</span></span>
-            <span v-else>
-              攻擊造成
-              <span class="log--damage">{{ logMessage.actionValue }} 點傷害</span>
+
+            <span style="color:yellow" v-else-if="logMessage.actionType === 'special_attack'">
+              <span style=" color: white;" class="log--heal"> 使用</span>
+              {{logMessage.actionBy === 'Capoo' ? '[破壞死光]' : '[咬咬]' }}
+              <span style="color: white;" class="log--heal"> 造成 </span>
+              <span class="log--heal">{{ logMessage.actionValue }} 點傷害</span></span>
             </span>
+
+            <span style="color:rgb(8, 216, 216)" v-else>
+              <span style=" color: white;" class="log--heal"> 使用</span>
+              {{logMessage.actionBy === 'Capoo' ? '[眼睛攻擊]' : '[罵人]' }}
+              <span style="color: white;" class="log--heal"> 造成 </span>
+              <span class="log--heal">{{ logMessage.actionValue }} 點傷害</span></span>
+            </span>
+
           </li>
         </ul>
       </div>
 
-      <!-- <div class="gameover" v-if="winner">
-        <button class="btnSize" @click="startGame">重新開始</button>
-      </div> -->
+      <div class="" v-if="winner">
+        <dialog open>
+          <p style="font-size: 30px;">{{win}}</p>
+          <form method="dialog">
+            <button class="btnSize" @click="startGame">重新開始</button>
+          </form>
+        </dialog>
+
+        <div class="attack" id="controls">
+
+          <button @click="attackMonster">眼睛攻擊</button>
+          <button :disabled="mayUseSpecialAttack" @click="specialAttackMonster">
+            破壞死光
+          </button>
+
+          <button @click="healPlayer">小雞能量</button>
+          <button @click="surrender">我認輸了</button>
+        </div>
+
+      </div>
 
       <div class="attack" id="controls" v-else>
 
-        <button @click="attackMonster">水汪汪眼睛攻擊</button>
+        <button @click="attackMonster">眼睛攻擊</button>
         <button :disabled="mayUseSpecialAttack" @click="specialAttackMonster">
           破壞死光
         </button>
 
-        <button @click="healPlayer">補充小雞能量</button>
-        <button @click="surrender">認輸</button>
+        <button @click="healPlayer">小雞能量</button>
+        <button @click="surrender">我認輸了</button>
       </div>
 
     </div>
   </div>
+
 
 </body>
 

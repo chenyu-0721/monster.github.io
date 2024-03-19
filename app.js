@@ -13,6 +13,8 @@ const app = Vue.createApp({
       img1: "img/capoo1.png",
       img2: "img/rabbit.png",
       win: "",
+      capooattack: "",
+      rabbitattack: "",
     };
   },
   computed: {
@@ -44,18 +46,15 @@ const app = Vue.createApp({
         this.img1 = "img/capoo5.png";
         this.img2 = "img/rabbit4.png";
         this.win = "Rabbit Win";
-        alert("遊戲結束\n" + this.win);
       } else if (this.currentRound > 15) {
         this.winner = "monster";
         this.win = "Rount Out";
-        alert("Rount Out");
       }
     },
     monsterHealth(value) {
       if (value <= 0 && this.playerHealth <= 0) {
         // A draw
         this.win = "draw";
-        alert("遊戲結束\n" + this.win);
         startGame();
       } else if (value <= 0) {
         // Monster lost
@@ -63,12 +62,10 @@ const app = Vue.createApp({
         this.img1 = "img/capoo6.png";
         this.img2 = "img/rabbit5.png";
         this.win = "Capoo Win";
-        alert("遊戲結束\n" + this.win);
         startGame();
       } else if (this.currentRound > 15) {
         this.winner = "monster";
         this.win = "Rount Out";
-        alert("Rount Out");
         startGame();
       }
     },
@@ -101,8 +98,10 @@ const app = Vue.createApp({
       this.currentRound++;
       const attackValue = getRandomValue(10, 25);
       this.monsterHealth -= attackValue;
-      this.addLogMessage("Capoo", "attack", attackValue);
-      this.attackPlayer();
+      this.addLogMessage("Capoo", "special_attack", attackValue);
+      const attackValue1 = getRandomValue(8, 15);
+      this.playerHealth -= attackValue;
+      this.addLogMessage("Rabbit", "special_attack", attackValue1);
       this.img1 = "img/capoo3.png";
       this.img2 = "img/rabbit3.png";
     },
@@ -124,7 +123,6 @@ const app = Vue.createApp({
       this.img1 = "img/capoo5.png";
       this.img2 = "img/rabbit4.png";
       this.win = "Rabbit Win";
-      alert("遊戲結束\n" + this.win);
     },
     addLogMessage(who, what, value) {
       this.logMessages.unshift({
