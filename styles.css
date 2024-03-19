@@ -1,10 +1,11 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
   font-family: DFKai-sb;
-  margin: 0;
   background-image: url("img/back1.png");
   background-size: cover;
 }
@@ -63,18 +64,12 @@ button:disabled {
   cursor: not-allowed;
 }
 
-.button-grid button {
-  /* width: 50%; 讓按鈕填滿父容器的寬度 */
-}
-
 /* 第一個容器 */
 .container_healthbar {
   display: flex;
   flex-direction: row;
   width: 100%;
   height: 20vh;
-  margin: 0px;
-  padding: 0px;
 }
 
 .item {
@@ -82,7 +77,6 @@ button:disabled {
   height: 100%;
   background-position: center;
   background-size: cover;
-  transition: flex 0.8s ease;
 }
 
 /* 咖波血量條 */
@@ -90,10 +84,8 @@ button:disabled {
   width: 100%;
   height: 40px;
   border: 1px solid #575757;
-  margin: 0px;
   margin-top: 15%;
   margin-left: 15%;
-  padding: 0px;
   background: #fde5e5;
 }
 
@@ -102,10 +94,8 @@ button:disabled {
   width: 100%;
   height: 40px;
   border: 1px solid #575757;
-  margin: 0px;
   margin-top: 15%;
   margin-left: -15%;
-  padding: 0px;
   background: #fde5e5;
 }
 
@@ -120,16 +110,12 @@ button:disabled {
 .round {
   text-align: center;
   font-size: 50px;
-  margin: 0px;
-  padding: 0px;
   padding-top: 3.5%;
 }
 
 /* 咖波圖片-血量條 */
 .capoo_healthber_img {
-  margin: 0px;
   margin-top: 0.5%;
-  padding: 0px;
   width: 8%;
   height: 20%;
   position: absolute;
@@ -138,8 +124,6 @@ button:disabled {
 
 /* 兔兔圖片-血量條 */
 .rabbit_healthber_img {
-  margin: 0px;
-  padding: 0px;
   right: 0;
   width: 8%;
   height: 20%;
@@ -156,22 +140,16 @@ button:disabled {
   text-align: center;
   width: 100%;
   height: 48vh;
-  margin: 0px;
-  padding: 0px;
 }
 
 /* 咖波對戰圖片  */
 .capoo_img {
-  margin: 0;
-  padding: 0;
   margin-top: 1%;
   width: 40%;
   height: 90%;
 }
 
 .rabbit_img {
-  margin: 0;
-  padding: 0;
   margin-right: 10%;
   width: 40%;
   height: 90%;
@@ -185,7 +163,6 @@ button:disabled {
   height: 100%;
   background-position: center;
   background-size: cover;
-  background-repeat: none;
   transition: flex 0.8s ease;
 }
 
@@ -195,14 +172,10 @@ button:disabled {
   flex-direction: row;
   width: 100%;
   height: 32vh;
-  margin: 0px;
-  padding: 0px;
 }
 
 /*  技能訊息   */
 .log {
-  margin: 0px;
-  padding: 0px;
   border: 10px solid white;
   box-shadow: 0 3px 15px blue;
   background: rgb(55, 56, 124);
@@ -214,8 +187,6 @@ button:disabled {
 /* 技能招式  */
 
 .attack {
-  margin: 0px;
-  padding: 0px;
   text-align: center;
   border: 10px solid white;
   box-shadow: 0 3px 15px blue;
@@ -226,8 +197,6 @@ button:disabled {
 }
 
 .gameover {
-  margin: 0px;
-  padding: 0px;
   text-align: center;
   border: 10px solid white;
   box-shadow: 0 3px 15px blue;
@@ -283,19 +252,53 @@ button:disabled {
 
 /* ------------------------------------------ */
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 705px) {
   .capoo_rabbit_font,
   .attack_font,
   .special_attack_font,
   .heal_font {
-    font-size: 100%;
+    font-size: 12px;
   }
 
   h2 {
-    font-size: 150%;
+    font-size: 20px;
   }
 
   button {
     font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 706px) and (max-width: 1000px) {
+  .capoo_rabbit_font,
+  .attack_font,
+  .special_attack_font,
+  .heal_font {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  button {
+    font-size: 35px;
+  }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1920px) {
+  .capoo_rabbit_font,
+  .attack_font,
+  .special_attack_font,
+  .heal_font {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  button {
+    font-size: 45px;
   }
 }
