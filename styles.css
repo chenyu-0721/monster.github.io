@@ -77,6 +77,8 @@ button:disabled {
   height: 100%;
   background-position: center;
   background-size: cover;
+  background-position: center;
+  background-size: cover;
 }
 
 /* 咖波血量條 */
@@ -108,9 +110,10 @@ button:disabled {
 
 /* 回合  */
 .round {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 50px;
-  padding-top: 3.5%;
 }
 
 /* 咖波圖片-血量條 */
@@ -260,6 +263,10 @@ button:disabled {
     font-size: 12px;
   }
 
+  .round {
+    font-size: 38px;
+  }
+
   h2 {
     font-size: 20px;
   }
@@ -275,6 +282,10 @@ button:disabled {
   .special_attack_font,
   .heal_font {
     font-size: 18px;
+  }
+
+  .round {
+    font-size: 45px;
   }
 
   h2 {
