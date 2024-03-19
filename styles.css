@@ -2,70 +2,46 @@
   box-sizing: border-box;
 }
 
-html {
-  font-family: "Jost", sans-serif;
-}
-
 body {
   font-family: DFKai-sb;
   margin: 0;
-  background-color: rgb(56, 58, 175);
   background-image: url("img/back1.png");
   background-size: cover;
 }
 
-header {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  padding: 0.5rem;
-  background-color: rgb(56, 58, 175);
-  color: white;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-section {
-  width: 90%;
-  max-width: 40rem;
-  margin: auto;
-}
-
 h2 {
-  font-size: 50px;
+  font-size: 200%;
+  margin: 5px 0 10px 0;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 6px solid white;
   color: white;
-  border-bottom: 5px solid white;
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 
-span {
-  font-weight: bold;
-  color: white;
-  font-size: 30px;
+li {
+  list-style: none;
 }
 
 dialog {
-  text-align: center;
+  /* text-align: center;
   top: 30%;
   width: 30%;
   max-width: auto;
-  max-height: auto;
+  max-height: auto; */
 }
 
 button {
-  font: inherit;
+  font-family: DFKai-sb;
+  font-weight: bold;
+  font-size: 30px;
   border: 1px solid rgb(56, 58, 175);
-  background-color: black;
+  background-color: rgb(7, 13, 41);
   color: white;
-  padding: 3rem 2rem;
   border-radius: 12px;
-  margin-left: 10px;
-  text-align: center;
-  width: 20%;
-  height: 20%;
-  max-width: 40%;
   cursor: pointer;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
-  font-size: 30px;
+  width: 50%;
+  height: 50%;
 }
 
 button:focus {
@@ -80,155 +56,211 @@ button:active {
 }
 
 button:disabled {
-  background-color: #ccc;
-  border-color: #ccc;
+  background-color: rgb(55, 56, 124);
+  border: 2px solid black;
   box-shadow: none;
-  color: #3f3f3f;
+  color: white;
   cursor: not-allowed;
 }
 
-.gameover {
-  box-shadow: 0 2px 8px blue;
-  background: rgb(55, 56, 124);
-  border-radius: 12px;
-  width: 60%;
-  opacity: 0.9;
-  height: auto;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.button-grid button {
+  /* width: 50%; 讓按鈕填滿父容器的寬度 */
 }
 
-.img1 {
-  width: 150px;
-  max-width: 80%;
-  height: auto;
-  top: 5%;
-  position: absolute;
-  z-index: 1;
-}
-
-.img2 {
-  max-width: 100%;
-  margin-top: 10%;
-  margin-left: 150px;
-  height: 300px;
-}
-
-.img3 {
-  width: 150px;
-  max-width: 80%;
-  height: auto;
-  top: 3%;
-  right: 1px;
-  position: absolute;
-  z-index: 1;
-}
-
-#monster h2,
-#player h2 {
-  margin: 0.25rem;
-}
-
-#controls {
+/* 第一個容器 */
+.container_healthbar {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  height: 20vh;
+  margin: 0px;
+  padding: 0px;
 }
 
-.btnSize {
-  width: 60%;
+.item {
+  flex: 1;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  transition: flex 0.8s ease;
 }
 
-.healthbar {
+/* 咖波血量條 */
+.capoo_healthbar {
   width: 100%;
   height: 40px;
-  margin-top: 60px;
   border: 1px solid #575757;
-  margin-left: 80px;
+  margin: 0px;
+  margin-top: 15%;
+  margin-left: 15%;
+  padding: 0px;
   background: #fde5e5;
 }
 
+/* 兔兔血量條 */
+.rabbit_healthbar {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #575757;
+  margin: 0px;
+  margin-top: 15%;
+  margin-left: -15%;
+  padding: 0px;
+  background: #fde5e5;
+}
+
+/* 血量內 */
 .healthbar__value {
   background-color: skyblue;
   width: 100%;
   height: 100%;
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-}
-
-.container1 {
-  display: flex;
-  flex-direction: row;
-}
-
-.rabbit {
-  text-align: left;
-  width: 30%;
-  max-width: auto;
-  max-height: 100px;
-  margin-top: 60px;
-  margin-right: 130px;
-  position: relative;
-}
-
-.Capoo {
-  text-align: right;
-  width: 30%;
-  max-width: auto;
-  max-height: 100px;
-  margin-top: 60px;
-  margin-right: auto;
-  position: relative;
-}
-
+/* 回合  */
 .round {
-  font-size: 60px;
   text-align: center;
-  width: 30%;
-  max-width: auto;
-  max-height: auto;
-  margin-top: 60px;
-  margin-left: 150px;
-  margin-right: auto;
-  position: relative;
+  font-size: 50px;
+  margin: 0px;
+  padding: 0px;
+  padding-top: 3.5%;
 }
 
-.attack {
-  box-shadow: 0 2px 8px white;
-  background: rgb(55, 56, 124);
-  border-radius: 12px;
-  text-align: center;
-  width: 60%;
+/* 咖波圖片-血量條 */
+.capoo_healthber_img {
+  margin: 0px;
+  margin-top: 0.5%;
+  padding: 0px;
+  width: 8%;
+  height: 20%;
+  position: absolute;
+  z-index: 1;
+}
 
-  opacity: 0.9;
-  height: auto;
-  position: fixed;
-  bottom: 0;
+/* 兔兔圖片-血量條 */
+.rabbit_healthber_img {
+  margin: 0px;
+  padding: 0px;
   right: 0;
+  width: 8%;
+  height: 20%;
+  position: absolute;
+  z-index: 1;
 }
 
+/* --------------------------------------------*/
+
+/*  中間部分  */
+.container_img {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  width: 100%;
+  height: 48vh;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* 咖波對戰圖片  */
+.capoo_img {
+  margin: 0;
+  padding: 0;
+  margin-top: 1%;
+  width: 40%;
+  height: 90%;
+}
+
+.rabbit_img {
+  margin: 0;
+  padding: 0;
+  margin-right: 10%;
+  width: 40%;
+  height: 90%;
+}
+
+/* --------------------------------------------------  */
+
+/*  log item */
+.item_log {
+  flex: 1;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  transition: flex 0.8s ease;
+}
+
+/* 對戰訊息 攻擊招式  */
+.container_attack_log {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 32vh;
+  margin: 0px;
+  padding: 0px;
+}
+
+/*  技能訊息   */
 .log {
+  margin: 0px;
+  padding: 0px;
   border: 10px solid white;
   box-shadow: 0 3px 15px blue;
   background: rgb(55, 56, 124);
   border-radius: 20px;
-  text-align: center;
   overflow-y: auto;
-  width: 40%;
-  height: auto;
-  max-height: 400px;
   opacity: 0.9;
-  position: fixed;
-  bottom: 0;
+}
+
+/* 技能招式  */
+
+.attack {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  border: 10px solid white;
+  box-shadow: 0 3px 15px blue;
+  background: rgb(55, 56, 124);
+  border-radius: 20px;
+  overflow-y: auto;
+  opacity: 0.9;
+}
+
+.gameover {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  border: 10px solid white;
+  box-shadow: 0 3px 15px blue;
+  background: rgb(55, 56, 124);
+  border-radius: 20px;
+  overflow-y: auto;
+  opacity: 0.9;
+}
+
+/* -----------------------------------------  */
+
+.capoo_rabbit_font,
+.attack_font,
+.special_attack_font,
+.heal_font {
+  font-size: 200%;
+}
+
+.capoo_rabbit_font {
+  color: white;
+}
+
+.attack_font {
+  color: pink;
+}
+
+.special_attack_font {
+  color: yellow;
+}
+
+.heal_font {
+  color: greenyellow;
 }
 
 #log ul {
@@ -240,10 +272,6 @@ button:disabled {
 
 #log li {
   margin: 0.3rem 0;
-}
-
-.log--player .log--monster {
-  color: white;
 }
 
 .log--damage {

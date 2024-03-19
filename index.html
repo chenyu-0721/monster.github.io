@@ -18,53 +18,65 @@
 
   <div id="game" class="">
 
-    <div class="container">
-      <img src="img/capoo1.png" class="img1" />
-      <div id="player" class="Capoo">
-        <div class="healthbar">
+    <div class="container_healthbar">
+
+      <img class="capoo_healthber_img" src="img/capoo1.png" />
+
+      <div id="player" class="item Capoo">
+        <div class="capoo_healthbar">
           <div class="healthbar__value" :style="playerBarStyles"></div>
         </div>
-        <img :src="img1" class="img2" />
       </div>
 
-      <div class="round">{{currentRound}}/15</div>
+      <div class="item round">{{currentRound}}/15</div>
 
-      <div id="monster" class="rabbit">
-        <div class="healthbar">
+      <div id="monster" class="item rabbit">
+        <div class="rabbit_healthbar">
           <div class="healthbar__value" :style="monsterBarStyles"></div>
         </div>
-        <img :src="img2" class="img2" />
       </div>
-      <img src="img/rabbit.png" class="img3" />
+
+      <img class="rabbit_healthber_img" src="img/rabbit.png" />
 
     </div>
 
+    <div class="container_img">
 
-    <div class="container">
+      <div class="item">
+        <img :src="img1" class="capoo_img" />
+      </div>
 
-      <div id="log" class="log">
+      <div class="item">
+        <img :src="img2" class="rabbit_img" />
+      </div>
+    </div>
+
+
+
+    <div class="container_attack_log">
+      <div id="log" class="item_log  log">
         <h2>對戰訊息</h2>
         <ul>
           <li v-for="logMessage in logMessages">
-            <span
+            <span class="capoo_rabbit_font"
               :class="{'log--player': logMessage.actionBy === 'Capoo', 'log--monster': logMessage.actionBy === 'Rabbit'}">{{
               logMessage.actionBy === 'Capoo' ? '咖波' : '兔兔'
               }}</span>
-            <span style="color:greenyellow" v-if="logMessage.actionType === 'heal'">
-              <span style="color: white;" class="log--heal"> 使用</span>
+            <span class="heal_font" v-if="logMessage.actionType === 'heal'">
+              <span class="log--heal"> 使用</span>
               {{logMessage.actionBy === 'Capoo' ? '[小雞能量]' : '[罵人]' }}
-              <span style="color: white;" class="log--heal">治癒自己 </span>
+              <span class="log--heal">治癒自己 </span>
               <span class="log--heal">{{ logMessage.actionValue }} 點生命</span></span>
 
-            <span style="color:yellow" v-else-if="logMessage.actionType === 'special_attack'">
-              <span style=" color: white;" class="log--heal"> 使用</span>
+            <span class="special_attack_font" v-else-if="logMessage.actionType === 'special_attack'">
+              <span class="log--heal"> 使用</span>
               {{logMessage.actionBy === 'Capoo' ? '[破壞死光]' : '[咬咬]' }}
-              <span style="color: white;" class="log--heal"> 造成 </span>
+              <span class="log--heal"> 造成 </span>
               <span class="log--heal">{{ logMessage.actionValue }} 點傷害</span></span>
             </span>
 
-            <span style="color:rgb(8, 216, 216)" v-else>
-              <span style=" color: white;" class="log--heal"> 使用</span>
+            <span class="attack_font" v-else>
+              <span class="log--heal"> 使用</span>
               {{logMessage.actionBy === 'Capoo' ? '[眼睛攻擊]' : '[罵人]' }}
               <span style="color: white;" class="log--heal"> 造成 </span>
               <span class="log--heal">{{ logMessage.actionValue }} 點傷害</span></span>
@@ -74,7 +86,7 @@
         </ul>
       </div>
 
-      <div class="" v-if="winner">
+      <div class="item gameover" v-if="winner">
         <dialog open>
           <p style="font-size: 30px;">{{win}}</p>
           <form method="dialog">
@@ -82,21 +94,18 @@
           </form>
         </dialog>
 
-        <div class="attack" id="controls">
-
-          <button @click="attackMonster">眼睛攻擊</button>
-          <button :disabled="mayUseSpecialAttack" @click="specialAttackMonster">
+        <div class=" item " id="controls">
+          <button :disabled="gameover" @click="attackMonster">眼睛攻擊</button>
+          <button :disabled="gameover" @click="specialAttackMonster">
             破壞死光
           </button>
 
-          <button @click="healPlayer">小雞能量</button>
-          <button @click="surrender">我認輸了</button>
+          <button :disabled="gameover" @click="healPlayer">小雞能量</button>
+          <button :disabled="gameover" @click="surrender">我認輸了</button>
         </div>
-
       </div>
 
-      <div class="attack" id="controls" v-else>
-
+      <div class="item attack" id="controls" v-else>
         <button @click="attackMonster">眼睛攻擊</button>
         <button :disabled="mayUseSpecialAttack" @click="specialAttackMonster">
           破壞死光
@@ -105,7 +114,6 @@
         <button @click="healPlayer">小雞能量</button>
         <button @click="surrender">我認輸了</button>
       </div>
-
     </div>
   </div>
 

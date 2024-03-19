@@ -15,6 +15,7 @@ const app = Vue.createApp({
       win: "",
       capooattack: "",
       rabbitattack: "",
+      gameover: true,
     };
   },
   computed: {
@@ -33,28 +34,34 @@ const app = Vue.createApp({
     mayUseSpecialAttack() {
       return this.currentRound % 3 !== 0;
     },
+    gameover() {
+      return this.gameover;
+    },
   },
   watch: {
     playerHealth(value) {
       if (value <= 0 && this.monsterHealth <= 0) {
         // A draw
         this.win = "draw";
-        alert("遊戲結束\n" + this.win);
+        this.gameover = false;
       } else if (value <= 0) {
         // Player lost
         this.winner = "monster";
         this.img1 = "img/capoo5.png";
         this.img2 = "img/rabbit4.png";
         this.win = "Rabbit Win";
+        this.gameover = false;
       } else if (this.currentRound > 15) {
         this.winner = "monster";
         this.win = "Rount Out";
+        this.gameover = false;
       }
     },
     monsterHealth(value) {
       if (value <= 0 && this.playerHealth <= 0) {
         // A draw
         this.win = "draw";
+        this.gameover = false;
         startGame();
       } else if (value <= 0) {
         // Monster lost
@@ -62,10 +69,12 @@ const app = Vue.createApp({
         this.img1 = "img/capoo6.png";
         this.img2 = "img/rabbit5.png";
         this.win = "Capoo Win";
+        this.gameover = false;
         startGame();
       } else if (this.currentRound > 15) {
         this.winner = "monster";
         this.win = "Rount Out";
+        this.gameover = false;
         startGame();
       }
     },
@@ -79,6 +88,7 @@ const app = Vue.createApp({
       this.logMessages = [];
       this.img1 = "img/capoo1.png";
       this.img2 = "img/rabbit.png";
+      this.gameover = true;
     },
     attackMonster() {
       this.currentRound++;
