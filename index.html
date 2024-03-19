@@ -16,11 +16,11 @@
 <body>
 
 
-  <div id="game" class="">
+  <div id="game">
 
     <div class="container_healthbar">
 
-      <img class="capoo_healthber_img" src="img/capoo1.png" />
+      <img class="capoo_healthber_img" src="img/capoo1.png" alt="capoo" />
 
       <div id="player" class="item Capoo">
         <div class="capoo_healthbar">
@@ -36,18 +36,18 @@
         </div>
       </div>
 
-      <img class="rabbit_healthber_img" src="img/rabbit.png" />
+      <img class="rabbit_healthber_img" src="img/rabbit.png" alt="rabbit" />
 
     </div>
 
     <div class="container_img">
 
       <div class="item">
-        <img :src="img1" class="capoo_img" />
+        <img :src="img1" class="capoo_img" alt="capooimg" />
       </div>
 
       <div class="item">
-        <img :src="img2" class="rabbit_img" />
+        <img :src="img2" class="rabbit_img" alt="rabbitimg" />
       </div>
     </div>
 
@@ -72,14 +72,14 @@
               <span class="log--heal"> 使用</span>
               {{logMessage.actionBy === 'Capoo' ? '[破壞死光]' : '[咬咬]' }}
               <span class="log--heal"> 造成 </span>
-              <span class="log--heal">{{ logMessage.actionValue }} 點傷害</span></span>
+              <span class="log--heal">{{ logMessage.actionValue }} 點傷害</span>
             </span>
 
             <span class="attack_font" v-else>
               <span class="log--heal"> 使用</span>
               {{logMessage.actionBy === 'Capoo' ? '[眼睛攻擊]' : '[罵人]' }}
               <span style="color: white;" class="log--heal"> 造成 </span>
-              <span class="log--heal">{{ logMessage.actionValue }} 點傷害</span></span>
+              <span class="log--heal">{{ logMessage.actionValue }} 點傷害</span>
             </span>
 
           </li>
@@ -94,15 +94,6 @@
           </form>
         </dialog>
 
-        <div class=" item " id="controls">
-          <button :disabled="gameover" @click="attackMonster">眼睛攻擊</button>
-          <button :disabled="gameover" @click="specialAttackMonster">
-            破壞死光
-          </button>
-
-          <button :disabled="gameover" @click="healPlayer">小雞能量</button>
-          <button :disabled="gameover" @click="surrender">我認輸了</button>
-        </div>
       </div>
 
       <div class="item attack" id="controls" v-else>

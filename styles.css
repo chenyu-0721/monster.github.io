@@ -82,7 +82,6 @@ button:disabled {
   height: 100%;
   background-position: center;
   background-size: cover;
-  background-repeat: none;
   transition: flex 0.8s ease;
 }
 
@@ -280,4 +279,23 @@ button:disabled {
 
 .log--heal {
   color: yellow;
+}
+
+/* ------------------------------------------ */
+
+@media only screen and (max-width: 768px) {
+  .capoo_rabbit_font,
+  .attack_font,
+  .special_attack_font,
+  .heal_font {
+    font-size: 100%;
+  }
+
+  h2 {
+    font-size: 150%;
+  }
+
+  button {
+    font-size: 25px;
+  }
 }
