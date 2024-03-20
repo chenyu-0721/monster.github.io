@@ -63,7 +63,6 @@ const app = Vue.createApp({
         // A draw
         this.win = "draw";
         this.gameover = true;
-        startGame();
       } else if (value <= 0) {
         // Monster lost
         this.winner = "player";
@@ -71,12 +70,10 @@ const app = Vue.createApp({
         this.img2 = "img/rabbit5.png";
         this.win = "Capoo Win";
         this.gameover = true;
-        startGame();
       } else if (this.currentRound > 15) {
         this.winner = "monster";
         this.win = "Rount Out";
         this.gameover = true;
-        startGame();
       }
     },
   },
