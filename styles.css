@@ -19,7 +19,7 @@ header {
 
 .capoo_header_img,
 .rabbit_header_img {
-  width: 10%;
+  width: 10vh;
   height: auto;
   margin-left: 0%;
 }
@@ -73,7 +73,7 @@ header {
 
 .capoo_article_img,
 .rabbit_article_img {
-  width: 40%;
+  width: 50vh;
   height: auto;
 }
 
