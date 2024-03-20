@@ -88,6 +88,13 @@
           </form>
         </dialog>
 
+        <button :disabled="gameover">眼睛攻擊</button>
+        <button :disabled="gameover" @click="specialAttackMonster">
+          破壞死光
+        </button>
+
+        <button :disabled="gameover">小雞能量</button>
+        <button :disabled="gameover">我認輸了</button>
 
       </div>
 
