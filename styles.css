@@ -38,7 +38,7 @@ header {
 .round {
   width: 20%;
   align-self: center;
-  font-size: 40px;
+  font-size: 55px;
 }
 
 /* 血量內 */
@@ -233,6 +233,10 @@ h2 {
     font-size: 20px;
   }
 
+  .round {
+    font-size: 30px;
+  }
+
   h2 {
     font-size: 20px;
   }
@@ -250,6 +254,10 @@ h2 {
     font-size: 25px;
   }
 
+  .round {
+    font-size: 35px;
+  }
+
   h2 {
     font-size: 26px;
   }
@@ -265,6 +273,10 @@ h2 {
   .special_attack_font,
   .heal_font {
     font-size: 30px;
+  }
+
+  .round {
+    font-size: 45px;
   }
 
   h2 {
