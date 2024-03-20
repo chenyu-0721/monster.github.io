@@ -30,7 +30,8 @@ header {
 
 .healthbar {
   width: 100%;
-  height: auto;
+  height: 5vh;
+  align-self: center;
   border: 1px solid #575757;
   background: #fde5e5;
 }
