@@ -155,6 +155,7 @@ dialog {
   top: 40%;
   left: 35%;
   width: 30%;
+  z-index: 1;
 }
 
 h2 {
