@@ -73,7 +73,7 @@ header {
 
 .capoo_article_img,
 .rabbit_article_img {
-  width: 50vh;
+  width: 40vh;
   height: auto;
 }
 
@@ -238,6 +238,11 @@ h2 {
     font-size: 30px;
   }
 
+  .capoo_article_img,
+  .rabbit_article_img {
+    width: 20vh;
+  }
+
   dialog {
     left: 28%;
     width: 43%;
@@ -262,6 +267,11 @@ h2 {
 
   .round {
     font-size: 35px;
+  }
+
+  .capoo_article_img,
+  .rabbit_article_img {
+    width: 30vh;
   }
 
   dialog {
