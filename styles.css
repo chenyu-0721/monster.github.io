@@ -4,45 +4,130 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: DFKai-sb;
-  background-image: url("img/back1.png");
-  background-size: cover;
-}
-
-h2 {
-  font-size: 200%;
-  margin: 5px 0 10px 0;
-  text-align: center;
-  padding-bottom: 10px;
-  border-bottom: 6px solid white;
+header {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  background-color: #880017;
   color: white;
-}
-
-li {
-  list-style: none;
-}
-
-dialog {
   text-align: center;
-  top: 30%;
-  width: 30%;
-  max-width: auto;
-  max-height: auto;
+}
+
+.container_header {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.capoo_header_img,
+.rabbit_header_img {
+  width: 10%;
+  height: auto;
+  margin-left: 0%;
+}
+
+.rabbit_header_img {
+  order: 1;
+}
+
+.healthbar {
+  width: 100%;
+  height: auto;
+  border: 1px solid #575757;
+  background: #fde5e5;
+}
+
+.round {
+  width: 20%;
+  align-self: center;
+  font-size: 40px;
+}
+
+/* 血量內 */
+.healthbar__value {
+  background-color: skyblue;
+  width: 100%;
+  height: 100%;
+}
+
+.capoo-header1,
+.rabbit-header1 {
+  width: 40%;
+  align-self: center;
+  display: flex;
+}
+
+.container_article {
+  height: 50vh;
+  display: flex;
+  justify-content: space-between;
+  background: #fde5e5;
+}
+
+.capoo-article,
+.rabbit-article {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.capoo_article_img,
+.rabbit_article_img {
+  width: 40%;
+  height: auto;
+}
+
+.container_aside {
+  height: 40vh;
+  display: flex;
+  justify-content: space-between;
+  background: palegreen;
+}
+
+.log {
+  width: 50%;
+  border: 10px solid white;
+  box-shadow: 0 3px 15px blue;
+  background: rgb(55, 56, 124);
+  border-radius: 20px;
+  overflow-y: auto;
+  opacity: 0.9;
+}
+
+/* 技能招式  */
+
+.attack {
+  width: 50%;
+  border: 10px solid white;
+  box-shadow: 0 3px 15px blue;
+  background: rgb(55, 56, 124);
+  border-radius: 20px;
+  overflow-y: auto;
+  opacity: 0.9;
+}
+
+.gameover {
+  width: 50%;
+  border: 10px solid white;
+  box-shadow: 0 3px 15px blue;
+  background: rgb(55, 56, 124);
+  border-radius: 20px;
+  overflow-y: auto;
+  opacity: 0.9;
 }
 
 button {
   font-family: DFKai-sb;
   font-weight: bold;
-  font-size: 30px;
-  border: 1px solid rgb(56, 58, 175);
+  font-size: 40px;
+  border: 3px solid rgb(56, 58, 175);
+  border-right: 5px;
   background-color: rgb(7, 13, 41);
   color: white;
   border-radius: 12px;
   cursor: pointer;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
-  width: 50%;
   height: 50%;
+  width: 50%;
 }
 
 button:focus {
@@ -57,116 +142,31 @@ button:active {
 }
 
 button:disabled {
-  background-color: rgb(55, 56, 124);
+  background-color: rgb(126, 118, 118);
   border: 2px solid black;
   box-shadow: none;
   color: white;
   cursor: not-allowed;
 }
 
-/* 第一個容器 */
-.container_healthbar {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 20vh;
-}
-
-.item {
-  flex: 1;
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  background-position: center;
-  background-size: cover;
-}
-
-/* 咖波血量條 */
-.capoo_healthbar {
-  width: 100%;
-  height: 40px;
-  border: 1px solid #575757;
-  margin-top: 15%;
-  margin-left: 15%;
-  background: #fde5e5;
-}
-
-/* 兔兔血量條 */
-.rabbit_healthbar {
-  width: 100%;
-  height: 40px;
-  border: 1px solid #575757;
-  margin-top: 15%;
-  margin-left: -15%;
-  background: #fde5e5;
-}
-
-/* 血量內 */
-.healthbar__value {
-  background-color: skyblue;
-  width: 100%;
-  height: 100%;
-}
-
-/* 回合  */
-.round {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 50px;
-}
-
-/* 咖波圖片-血量條 */
-.capoo_healthber_img {
-  margin-top: 0.5%;
-  width: 8%;
-  height: 20%;
-  position: absolute;
-  z-index: 1;
-}
-
-/* 兔兔圖片-血量條 */
-.rabbit_healthber_img {
-  right: 0;
-  width: 8%;
-  height: 20%;
-  position: absolute;
-  z-index: 1;
-}
-
-/* --------------------------------------------*/
-
-/*  中間部分  */
-.container_img {
-  display: flex;
-  flex-direction: row;
+dialog {
   text-align: center;
-  width: 100%;
-  height: 48vh;
+  top: 40%;
+  left: 35%;
+  width: 30%;
 }
 
-/* 咖波對戰圖片  */
-.capoo_img {
-  margin-top: 1%;
-  width: 40%;
-  height: 90%;
+h2 {
+  font-size: 40px;
+  margin: 5px 0 10px 0;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 6px solid white;
+  color: white;
 }
 
-.rabbit_img {
-  margin-right: 10%;
-  width: 40%;
-  height: 90%;
-}
-
-/* --------------------------------------------------  */
-
-/*  log item */
-.item_log {
-  flex: 1;
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  transition: flex 0.8s ease;
+.winfont {
+  font-size: 30px;
 }
 
 /* 對戰訊息 攻擊招式  */
@@ -178,36 +178,6 @@ button:disabled {
 }
 
 /*  技能訊息   */
-.log {
-  border: 10px solid white;
-  box-shadow: 0 3px 15px blue;
-  background: rgb(55, 56, 124);
-  border-radius: 20px;
-  overflow-y: auto;
-  opacity: 0.9;
-}
-
-/* 技能招式  */
-
-.attack {
-  text-align: center;
-  border: 10px solid white;
-  box-shadow: 0 3px 15px blue;
-  background: rgb(55, 56, 124);
-  border-radius: 20px;
-  overflow-y: auto;
-  opacity: 0.9;
-}
-
-.gameover {
-  text-align: center;
-  border: 10px solid white;
-  box-shadow: 0 3px 15px blue;
-  background: rgb(55, 56, 124);
-  border-radius: 20px;
-  overflow-y: auto;
-  opacity: 0.9;
-}
 
 /* -----------------------------------------  */
 
@@ -215,7 +185,7 @@ button:disabled {
 .attack_font,
 .special_attack_font,
 .heal_font {
-  font-size: 200%;
+  font-size: 30px;
 }
 
 .capoo_rabbit_font {
@@ -255,16 +225,12 @@ button:disabled {
 
 /* ------------------------------------------ */
 
-@media (max-width: 705px) {
+@media (max-width: 643px) {
   .capoo_rabbit_font,
   .attack_font,
   .special_attack_font,
   .heal_font {
-    font-size: 12px;
-  }
-
-  .round {
-    font-size: 38px;
+    font-size: 20px;
   }
 
   h2 {
@@ -276,16 +242,12 @@ button:disabled {
   }
 }
 
-@media screen and (min-width: 706px) and (max-width: 1000px) {
+@media screen and (min-width: 644px) and (max-width: 1000px) {
   .capoo_rabbit_font,
   .attack_font,
   .special_attack_font,
   .heal_font {
-    font-size: 18px;
-  }
-
-  .round {
-    font-size: 45px;
+    font-size: 25px;
   }
 
   h2 {
@@ -302,7 +264,7 @@ button:disabled {
   .attack_font,
   .special_attack_font,
   .heal_font {
-    font-size: 26px;
+    font-size: 30px;
   }
 
   h2 {

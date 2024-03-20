@@ -4,64 +4,59 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Capoo vs Rabbit </title>
+  <title>Capoo vs Rabbit</title>
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <script src="https://unpkg.com/vue@3.4.9/dist/vue.global.js" defer></script>
   <script src="app.js" defer></script>
-
-
 </head>
 
 <body>
-
-
   <div id="game">
 
-    <div class="container_healthbar">
-
-      <img class="capoo_healthber_img" src="img/capoo1.png" alt="capoo" />
-
-      <div id="player" class="item Capoo">
-        <div class="capoo_healthbar">
+    <header class="container_header">
+      <div id="player" class="capoo-header1">
+        <img src="img/capoo1.png" alt="capoo" class="capoo_header_img" />
+        <div class="healthbar">
           <div class="healthbar__value" :style="playerBarStyles"></div>
         </div>
       </div>
 
       <div class="item round">{{currentRound}}/15</div>
 
-      <div id="monster" class="item rabbit">
-        <div class="rabbit_healthbar">
+      <div id="monster" class="rabbit-header1">
+        <img class="rabbit_header_img" src="img/rabbit.png" alt="rabbit" />
+        <div class="healthbar">
           <div class="healthbar__value" :style="monsterBarStyles"></div>
         </div>
       </div>
+    </header>
 
-      <img class="rabbit_healthber_img" src="img/rabbit.png" alt="rabbit" />
+    <article class="container_article">
 
-    </div>
-
-    <div class="container_img">
-
-      <div class="item">
-        <img :src="img1" class="capoo_img" alt="capooimg" />
+      <div class="capoo-article">
+        <img :src="img1" class="capoo_article_img" alt="" />
       </div>
 
-      <div class="item">
-        <img :src="img2" class="rabbit_img" alt="rabbitimg" />
+      <div class="rabbit-article">
+        <img :src="img2" class="rabbit_article_img" alt="" />
       </div>
-    </div>
+
+
+    </article>
 
 
 
-    <div class="container_attack_log">
-      <div id="log" class="item_log  log">
+
+    <aside class="container_aside">
+
+      <div id="log" class="log">
         <h2>對戰訊息</h2>
         <ul>
           <li v-for="logMessage in logMessages">
             <span class="capoo_rabbit_font"
               :class="{'log--player': logMessage.actionBy === 'Capoo', 'log--monster': logMessage.actionBy === 'Rabbit'}">{{
-              logMessage.actionBy === 'Capoo' ? '咖波' : '兔兔'
-              }}</span>
+              logMessage.actionBy === 'Capoo' ? '咖波' : '兔兔' }}</span>
             <span class="heal_font" v-if="logMessage.actionType === 'heal'">
               <span class="log--heal"> 使用</span>
               {{logMessage.actionBy === 'Capoo' ? '[小雞能量]' : '[罵人]' }}
@@ -78,25 +73,25 @@
             <span class="attack_font" v-else>
               <span class="log--heal"> 使用</span>
               {{logMessage.actionBy === 'Capoo' ? '[眼睛攻擊]' : '[罵人]' }}
-              <span style="color: white;" class="log--heal"> 造成 </span>
+              <span style="color: white" class="log--heal"> 造成 </span>
               <span class="log--heal">{{ logMessage.actionValue }} 點傷害</span>
             </span>
-
           </li>
         </ul>
       </div>
 
-      <div class="item gameover" v-if="winner">
-
+      <div class="gameover" v-if="winner">
         <dialog open>
           <form method="dialog">
+            <div class="winfont">{{win}}</div>
             <button class="btnSize" @click="startGame">重新開始</button>
           </form>
         </dialog>
 
+
       </div>
 
-      <div class="item attack" id="controls" v-else>
+      <div class="attack" id="controls" v-else>
         <button @click="attackMonster">眼睛攻擊</button>
         <button :disabled="mayUseSpecialAttack" @click="specialAttackMonster">
           破壞死光
@@ -105,12 +100,11 @@
         <button @click="healPlayer">小雞能量</button>
         <button @click="surrender">我認輸了</button>
       </div>
-    </div>
-  </div>
+
+
+    </aside>
 
 
 </body>
-
-
 
 </html>
