@@ -238,6 +238,11 @@ h2 {
     font-size: 30px;
   }
 
+  dialog {
+    left: 28%;
+    width: 43%;
+  }
+
   h2 {
     font-size: 20px;
   }
@@ -259,6 +264,11 @@ h2 {
     font-size: 35px;
   }
 
+  dialog {
+    left: 26%;
+    width: 45%;
+  }
+
   h2 {
     font-size: 26px;
   }
@@ -278,6 +288,11 @@ h2 {
 
   .round {
     font-size: 45px;
+  }
+
+  dialog {
+    left: 32%;
+    width: 35%;
   }
 
   h2 {
