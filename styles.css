@@ -61,6 +61,7 @@ header {
   font-size: 100px;
   align-self: center;
   display: flex;
+  align-self: flex-end;
 }
 
 .container_article {
@@ -176,7 +177,7 @@ h2 {
 }
 
 .winfont {
-  font-size: 30px;
+  font-size: 40px;
 }
 
 /* 對戰訊息 攻擊招式  */
@@ -234,12 +235,14 @@ h2 {
 }
 
 .btnsize {
-  font-size: 40px;
+  font-size: 30px;
+  height: 50%;
+  width: 35%;
 }
 
 /* ------------------------------------------ */
 
-@media (min-width: 500px) and (max-width: 643px) {
+@media only screen and (min-width: 500px) and (max-width: 643px) {
   .capoo_rabbit_font,
   .attack_font,
   .special_attack_font,
@@ -250,6 +253,10 @@ h2 {
   .who_capoo_win,
   .who_rabbit_win {
     font-size: 30px;
+  }
+
+  .winfont {
+    font-size: 31px;
   }
 
   .round {
@@ -263,6 +270,7 @@ h2 {
 
   .btnsize {
     font-size: 15px;
+    width: 50%;
   }
 
   h2 {
@@ -274,7 +282,7 @@ h2 {
   }
 }
 
-@media (min-width: 644px) and (max-width: 799px) {
+@media only screen and (min-width: 644px) and (max-width: 799px) {
   .capoo_rabbit_font,
   .attack_font,
   .special_attack_font,
@@ -309,7 +317,7 @@ h2 {
   }
 }
 
-@media (min-width: 800px) and (max-width: 1028px) {
+@media only screen and (min-width: 800px) and (max-width: 1028px) {
   .capoo_rabbit_font,
   .attack_font,
   .special_attack_font,
@@ -344,7 +352,7 @@ h2 {
   }
 }
 
-@media (min-width: 1029px) and (max-width: 1440px) {
+@media only screen and (min-width: 1029px) and (max-width: 1440px) {
   .capoo_rabbit_font,
   .attack_font,
   .special_attack_font,
