@@ -290,13 +290,13 @@ h2 {
   }
 
   .winfont {
-    font-size: 20px;
+    font-size: 10px;
   }
 
   .btnsize {
-    font-size: 20px;
+    font-size: 13px;
     width: 50%;
-    height: 15%;
+    height: 12%;
   }
 
   h2 {
@@ -331,11 +331,11 @@ h2 {
   }
 
   .winfont {
-    font-size: 40px;
+    font-size: 30px;
   }
 
   .btnsize {
-    font-size: 28px;
+    font-size: 25px;
     height: 20%;
   }
 
