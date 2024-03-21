@@ -242,7 +242,7 @@ h2 {
 
 /* ------------------------------------------ */
 
-@media only screen and (min-width: 500px) and (max-width: 643px) {
+@media only screen and (max-width: 643px) {
   .capoo_rabbit_font,
   .attack_font,
   .special_attack_font,
