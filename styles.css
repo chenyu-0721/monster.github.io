@@ -155,6 +155,7 @@ dialog {
   top: 40%;
   left: 35%;
   width: 30%;
+  height: 12vh;
   z-index: 1;
 }
 
@@ -225,6 +226,10 @@ h2 {
   color: yellow;
 }
 
+.btnsize {
+  font-size: 40px;
+}
+
 /* ------------------------------------------ */
 
 @media (min-width: 500px) and (max-width: 643px) {
@@ -244,9 +249,8 @@ h2 {
     width: 20vh;
   }
 
-  dialog {
-    left: 28%;
-    width: 43%;
+  .btnsize {
+    font-size: 15px;
   }
 
   h2 {
@@ -254,7 +258,7 @@ h2 {
   }
 
   button {
-    font-size: 25px;
+    font-size: 20px;
   }
 }
 
@@ -275,9 +279,8 @@ h2 {
     width: 20vh;
   }
 
-  dialog {
-    left: 28%;
-    width: 43%;
+  .btnsize {
+    font-size: 20px;
   }
 
   h2 {
@@ -306,9 +309,8 @@ h2 {
     width: 30vh;
   }
 
-  dialog {
-    left: 26%;
-    width: 46%;
+  .btnsize {
+    font-size: 25px;
   }
 
   h2 {
@@ -332,9 +334,8 @@ h2 {
     font-size: 45px;
   }
 
-  dialog {
-    left: 32%;
-    width: 39%;
+  .btnsize {
+    font-size: 30px;
   }
 
   h2 {
