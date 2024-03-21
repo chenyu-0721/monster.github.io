@@ -34,6 +34,7 @@
 
     <article class="container_article">
 
+      <div class="who_capoo_win ">{{showgame == 1 ? ( winner === 'player' ? 'WIN' : 'LOSE') : ''}}</div>
       <div class="capoo-article">
         <img :src="img1" class="capoo_article_img" alt="" />
       </div>
@@ -41,6 +42,9 @@
       <div class="rabbit-article">
         <img :src="img2" class="rabbit_article_img" alt="" />
       </div>
+
+      <div class="who_rabbit_win">{{showgame == 1 ? winner === 'monster' ? 'WIN' : 'LOSE' : ''}}</div>
+
 
 
     </article>
@@ -81,12 +85,18 @@
       </div>
 
       <div class="gameover" v-if="winner">
-        <dialog open>
+
+
+
+        <dialog class="gameagain" open>
 
           <div class="winfont">{{win}}</div>
           <button class="btnsize" @click="startGame">重新開始</button>
 
         </dialog>
+
+
+
 
         <button :disabled="showgame">眼睛攻擊</button>
         <button :disabled="showgame" @click="specialAttackMonster">

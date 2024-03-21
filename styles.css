@@ -56,6 +56,13 @@ header {
   display: flex;
 }
 
+.who_capoo_win,
+.who_rabbit_win {
+  font-size: 100px;
+  align-self: center;
+  display: flex;
+}
+
 .container_article {
   height: 50vh;
   display: flex;
@@ -150,7 +157,7 @@ button:disabled {
   cursor: not-allowed;
 }
 
-dialog {
+.gameagain {
   text-align: center;
   top: 40%;
   left: 35%;
@@ -240,6 +247,11 @@ h2 {
     font-size: 13px;
   }
 
+  .who_capoo_win,
+  .who_rabbit_win {
+    font-size: 30px;
+  }
+
   .round {
     font-size: 30px;
   }
@@ -274,6 +286,11 @@ h2 {
     font-size: 30px;
   }
 
+  .who_capoo_win,
+  .who_rabbit_win {
+    font-size: 40px;
+  }
+
   .capoo_article_img,
   .rabbit_article_img {
     width: 20vh;
@@ -304,6 +321,11 @@ h2 {
     font-size: 35px;
   }
 
+  .who_capoo_win,
+  .who_rabbit_win {
+    font-size: 50px;
+  }
+
   .capoo_article_img,
   .rabbit_article_img {
     width: 30vh;
@@ -322,7 +344,7 @@ h2 {
   }
 }
 
-@media (min-width: 1029px) and (max-width: 1920px) {
+@media (min-width: 1029px) and (max-width: 1440px) {
   .capoo_rabbit_font,
   .attack_font,
   .special_attack_font,
@@ -330,6 +352,10 @@ h2 {
     font-size: 30px;
   }
 
+  .who_capoo_win,
+  .who_rabbit_win {
+    font-size: 60px;
+  }
   .round {
     font-size: 45px;
   }

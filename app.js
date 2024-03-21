@@ -16,7 +16,7 @@ const app = Vue.createApp({
       win: "",
       capooattack: "",
       rabbitattack: "",
-      game: 0,
+      game: false,
     };
   },
   computed: {
@@ -43,7 +43,8 @@ const app = Vue.createApp({
     playerHealth(value) {
       if (value <= 0 && this.monsterHealth <= 0) {
         // A draw
-        this.win = "draw";
+        this.win = "和局";
+        this.winner = "draw";
         this.game = 1;
       } else if (value <= 0) {
         // Player lost
@@ -52,7 +53,7 @@ const app = Vue.createApp({
         this.img2 = "img/rabbit4.png";
         this.win = "Rabbit Win";
         this.game = 1;
-      } else if (this.currentRound > 15) {
+      } else if (this.currentRound >= 15) {
         this.winner = "monster";
         this.win = "Rount Out";
         this.game = 1;
@@ -62,7 +63,8 @@ const app = Vue.createApp({
     monsterHealth(value) {
       if (value <= 0 && this.playerHealth <= 0) {
         // A draw
-        this.win = "draw";
+        this.win = "和局";
+        this.winner = "draw";
         this.game = 1;
       } else if (value <= 0) {
         // Monster lost
@@ -71,7 +73,7 @@ const app = Vue.createApp({
         this.img2 = "img/rabbit5.png";
         this.win = "Capoo Win";
         this.game = 1;
-      } else if (this.currentRound > 15) {
+      } else if (this.currentRound >= 15) {
         this.winner = "monster";
         this.win = "Rount Out";
         this.game = 1;
@@ -90,7 +92,7 @@ const app = Vue.createApp({
       this.game = 0;
     },
     attackMonster() {
-      this.currentRound++;
+      ++this.currentRound;
       const attackValue = getRandomValue(5, 12);
       this.monsterHealth -= attackValue;
       this.addLogMessage("Capoo", "attack", attackValue);
@@ -104,7 +106,7 @@ const app = Vue.createApp({
       this.addLogMessage("Rabbit", "attack", attackValue);
     },
     specialAttackMonster() {
-      this.currentRound++;
+      ++this.currentRound;
       const attackValue = getRandomValue(10, 25);
       this.monsterHealth -= attackValue;
       this.addLogMessage("Capoo", "special_attack", attackValue);
@@ -115,7 +117,7 @@ const app = Vue.createApp({
       this.img2 = "img/rabbit3.png";
     },
     healPlayer() {
-      this.currentRound++;
+      ++this.currentRound;
       const healValue = getRandomValue(8, 20);
       if (this.playerHealth + healValue > 100) {
         this.playerHealth = 100;
