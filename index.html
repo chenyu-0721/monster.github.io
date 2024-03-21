@@ -33,9 +33,8 @@
     </header>
 
     <article class="container_article">
+      <div class="who_capoo_win">{{showgame == 1 ? ( winner === 'player' ? 'WIN' : 'LOSE') : ''}}</div>
 
-      <div class="who_capoo_win ">{{showgame == 1 ? ( winner === 'player' ? 'WIN' : 'LOSE') : ''}}</div>
-      
       <div class="capoo-article">
         <img :src="img1" class="capoo_article_img" alt="" />
       </div>
