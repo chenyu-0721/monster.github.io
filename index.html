@@ -82,23 +82,24 @@
 
       <div class="gameover" v-if="winner">
         <dialog open>
-          <form method="dialog">
-            <div class="winfont">{{win}}</div>
-            <button @click="startGame">重新開始</button>
-          </form>
+
+          <div class="winfont">{{win}}</div>
+          <button @click="startGame">重新開始</button>
+
         </dialog>
 
-        <button :disabled="gameover">眼睛攻擊</button>
-        <button :disabled="gameover" @click="specialAttackMonster">
+        <button :disabled="showgame">眼睛攻擊</button>
+        <button :disabled="showgame" @click="specialAttackMonster">
           破壞死光
         </button>
 
-        <button :disabled="gameover">小雞能量</button>
-        <button :disabled="gameover">我認輸了</button>
+        <button :disabled="showgame">小雞能量</button>
+        <button :disabled="showgame">我認輸了</button>
 
       </div>
 
       <div class="attack" id="controls" v-else>
+
         <button @click="attackMonster">眼睛攻擊</button>
         <button :disabled="mayUseSpecialAttack" @click="specialAttackMonster">
           破壞死光
@@ -113,5 +114,6 @@
 
 
 </body>
+
 
 </html>

@@ -16,7 +16,7 @@ const app = Vue.createApp({
       win: "",
       capooattack: "",
       rabbitattack: "",
-      gameover: false,
+      game: 0,
     };
   },
   computed: {
@@ -35,8 +35,8 @@ const app = Vue.createApp({
     mayUseSpecialAttack() {
       return this.currentRound % 3 !== 0;
     },
-    gameover() {
-      return this.gameover;
+    showgame() {
+      return this.game;
     },
   },
   watch: {
@@ -44,36 +44,37 @@ const app = Vue.createApp({
       if (value <= 0 && this.monsterHealth <= 0) {
         // A draw
         this.win = "draw";
-        this.gameover = true;
+        this.game = 1;
       } else if (value <= 0) {
         // Player lost
         this.winner = "monster";
         this.img1 = "img/capoo5.png";
         this.img2 = "img/rabbit4.png";
         this.win = "Rabbit Win";
-        this.gameover = true;
+        this.game = 1;
       } else if (this.currentRound > 15) {
         this.winner = "monster";
         this.win = "Rount Out";
-        this.gameover = true;
+        this.game = 1;
       }
+      1;
     },
     monsterHealth(value) {
       if (value <= 0 && this.playerHealth <= 0) {
         // A draw
         this.win = "draw";
-        this.gameover = true;
+        this.game = 1;
       } else if (value <= 0) {
         // Monster lost
         this.winner = "player";
         this.img1 = "img/capoo6.png";
         this.img2 = "img/rabbit5.png";
         this.win = "Capoo Win";
-        this.gameover = true;
+        this.game = 1;
       } else if (this.currentRound > 15) {
         this.winner = "monster";
         this.win = "Rount Out";
-        this.gameover = true;
+        this.game = 1;
       }
     },
   },
@@ -86,7 +87,7 @@ const app = Vue.createApp({
       this.logMessages = [];
       this.img1 = "img/capoo1.png";
       this.img2 = "img/rabbit.png";
-      this.gameover = false;
+      this.game = 0;
     },
     attackMonster() {
       this.currentRound++;
@@ -131,7 +132,7 @@ const app = Vue.createApp({
       this.img1 = "img/capoo5.png";
       this.img2 = "img/rabbit4.png";
       this.win = "Rabbit Win";
-      this.gameover = true;
+      this.game = 1;
     },
     addLogMessage(who, what, value) {
       this.logMessages.unshift({

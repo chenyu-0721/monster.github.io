@@ -227,12 +227,12 @@ h2 {
 
 /* ------------------------------------------ */
 
-@media (max-width: 643px) {
+@media (min-width: 500px) and (max-width: 643px) {
   .capoo_rabbit_font,
   .attack_font,
   .special_attack_font,
   .heal_font {
-    font-size: 20px;
+    font-size: 13px;
   }
 
   .round {
@@ -258,12 +258,43 @@ h2 {
   }
 }
 
-@media screen and (min-width: 644px) and (max-width: 1000px) {
+@media (min-width: 644px) and (max-width: 799px) {
   .capoo_rabbit_font,
   .attack_font,
   .special_attack_font,
   .heal_font {
+    font-size: 18px;
+  }
+
+  .round {
+    font-size: 30px;
+  }
+
+  .capoo_article_img,
+  .rabbit_article_img {
+    width: 20vh;
+  }
+
+  dialog {
+    left: 28%;
+    width: 43%;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  button {
     font-size: 25px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1028px) {
+  .capoo_rabbit_font,
+  .attack_font,
+  .special_attack_font,
+  .heal_font {
+    font-size: 22px;
   }
 
   .round {
@@ -289,7 +320,7 @@ h2 {
   }
 }
 
-@media screen and (min-width: 1001px) and (max-width: 1920px) {
+@media (min-width: 1029px) and (max-width: 1920px) {
   .capoo_rabbit_font,
   .attack_font,
   .special_attack_font,
@@ -303,7 +334,7 @@ h2 {
 
   dialog {
     left: 32%;
-    width: 36%;
+    width: 39%;
   }
 
   h2 {
