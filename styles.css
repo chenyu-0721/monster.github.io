@@ -203,6 +203,7 @@ h2 {
 .test {
   width: 30%;
   min-width: auto;
+  text-align: center;
   height: auto;
   margin-top: 20vh;
 }
@@ -294,6 +295,7 @@ h2 {
 
   .btnsize {
     font-size: 20px;
+    width: 60%;
     height: 25%;
   }
 
