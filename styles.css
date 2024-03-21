@@ -180,6 +180,7 @@ h2 {
 
 .winfont {
   font-size: 40px;
+  text-align: center;
 }
 
 /* 對戰訊息 攻擊招式  */
@@ -258,11 +259,21 @@ h2 {
   }
 
   .winfont {
-    font-size: 31px;
+    font-size: 20px;
+    text-align: center;
   }
 
   .round {
     font-size: 30px;
+  }
+
+  .gameagain {
+    text-align: center;
+    top: 40%;
+    left: 32%;
+    width: 35%;
+    height: 10vh;
+    z-index: 1;
   }
 
   .capoo_article_img,
@@ -271,7 +282,7 @@ h2 {
   }
 
   .btnsize {
-    font-size: 15px;
+    font-size: 10px;
     width: 50%;
   }
 
