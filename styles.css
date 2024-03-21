@@ -262,7 +262,7 @@ h2 {
   .attack_font,
   .special_attack_font,
   .heal_font {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .who_capoo_win,
@@ -289,12 +289,12 @@ h2 {
   }
 
   .winfont {
-    font-size: 25px;
+    font-size: 20px;
   }
 
   .btnsize {
-    font-size: 10px;
-    height: 16%;
+    font-size: 8px;
+    height: 10%;
   }
 
   h2 {
