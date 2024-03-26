@@ -33,19 +33,20 @@
     </header>
 
     <article class="container_article">
-      <div class="who_capoo_win">{{showgame == 1 ? ( winner === 'player' ? 'WIN' : 'LOSE') : ''}}</div>
+      <div style="font-family: 'Times New Roman', Times, serif;" class="who_capoo_win" :style="playerWinLoseStyles">
+        {{showgame == 1 ? ( winner === 'player' ? 'WIN' : 'LOSE')
+        : ''}}</div>
       <img :src="img1" class=" capoo_article_img" alt="" />
-      <div class="test" v-if="winner">
+      <div class="winner" v-if="winner">
         <div class="winfont">{{win}}</div>
         <button class="btnsize" @click="startGame">重新開始</button>
       </div>
-      <div class="test" v-else>
-      </div>
+      <div class="winner" v-else></div>
       <img :src="img2" class="rabbit_article_img" alt="" />
-      <div class="who_rabbit_win">{{showgame == 1 ? winner === 'monster' ? 'WIN' : 'LOSE' : ''}}</div>
+      <div style="font-family: 'Times New Roman', Times, serif;" class="who_rabbit_win" :style="monsterWinLoseStyles">
+        {{showgame == 1 ? winner === 'monster' ? 'WIN' : 'LOSE'
+        : ''}}</div>
     </article>
-
-
 
 
     <aside class="container_aside">
@@ -78,31 +79,23 @@
           </li>
         </ul>
       </div>
-
       <div class="gameover" v-if="winner">
-
         <button :disabled="showgame">眼睛攻擊</button>
         <button :disabled="showgame" @click="specialAttackMonster">
           破壞死光
         </button>
-
         <button :disabled="showgame">小雞能量</button>
         <button :disabled="showgame">我認輸了</button>
-
       </div>
-
       <div class="attack" id="controls" v-else>
-
         <button @click="attackMonster">眼睛攻擊</button>
         <button :disabled="mayUseSpecialAttack" @click="specialAttackMonster">
           破壞死光
         </button>
-
         <button @click="healPlayer">小雞能量</button>
         <button @click="surrender">我認輸了</button>
       </div>
     </aside>
-
 </body>
 
 </html>

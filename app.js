@@ -20,6 +20,18 @@ const app = Vue.createApp({
     };
   },
   computed: {
+    playerWinLoseStyles() {
+      let winLoseColor = "red";
+      if (this.winner == "player") {
+        return { color: winLoseColor };
+      }
+    },
+    monsterWinLoseStyles() {
+      let winLoseColor = "red";
+      if (this.winner == "monster") {
+        return { color: winLoseColor };
+      }
+    },
     monsterBarStyles() {
       let barWidth = this.monsterHealth < 0 ? 0 : this.monsterHealth;
       let barColor = this.monsterHealth <= 40 ? "red" : "";
@@ -35,6 +47,9 @@ const app = Vue.createApp({
         width: barWidth + "%",
         background: barColor,
       };
+    },
+    mayUseSpecialAttack() {
+      return this.currentRound % 3 != 0;
     },
     showgame() {
       return this.game;
