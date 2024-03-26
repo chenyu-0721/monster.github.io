@@ -60,8 +60,10 @@ header {
 
 .who_capoo_win,
 .who_rabbit_win {
-  font-size: 40px;
-  align-self: center;
+  width: 10%;
+  font-size: 60px;
+  display: flex;
+  align-self: flex-end;
 }
 
 .who_rabbit_win {
@@ -71,14 +73,17 @@ header {
 .container_article {
   height: 50vh;
   display: flex;
-  justify-content: center;
-
+  justify-content: space-between;
   background: #fde5e5;
 }
 
-/* .capoo-article,
+.capoo-article,
 .rabbit-article {
-} */
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .capoo_article_img,
 .rabbit_article_img {
@@ -282,11 +287,6 @@ h2 {
   .capoo_article_img,
   .rabbit_article_img {
     width: 20vh;
-    align-self: center;
-  }
-
-  .rabbit_article_img {
-    margin: 10px;
   }
 
   .winfont {
