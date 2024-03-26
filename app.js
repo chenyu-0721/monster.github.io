@@ -21,19 +21,20 @@ const app = Vue.createApp({
   },
   computed: {
     monsterBarStyles() {
-      if (this.monsterHealth < 0) {
-        return { width: "0%" };
-      }
-      return { width: this.monsterHealth + "%" };
+      let barWidth = this.monsterHealth < 0 ? 0 : this.monsterHealth;
+      let barColor = this.monsterHealth <= 40 ? "red" : "";
+      return {
+        width: barWidth + "%",
+        background: barColor,
+      };
     },
     playerBarStyles() {
-      if (this.playerHealth < 0) {
-        return { width: "0%" };
-      }
-      return { width: this.playerHealth + "%" };
-    },
-    mayUseSpecialAttack() {
-      return this.currentRound % 3 !== 0;
+      let barWidth = this.playerHealth < 0 ? 0 : this.playerHealth;
+      let barColor = this.playerHealth <= 40 ? "red" : "";
+      return {
+        width: barWidth + "%",
+        background: barColor,
+      };
     },
     showgame() {
       return this.game;
