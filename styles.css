@@ -4,13 +4,6 @@
   box-sizing: border-box;
 }
 
-header {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  background-color: #880017;
-  color: white;
-  text-align: center;
-}
-
 h2 {
   font-size: 40px;
   margin: 5px 0 10px 0;
@@ -54,12 +47,22 @@ button:disabled {
   cursor: not-allowed;
 }
 
+/* 1. deal with header  */
+
+header {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  background-color: #880017;
+  color: white;
+  text-align: center;
+}
+
 .container_header {
   height: 10vh;
   display: flex;
   justify-content: space-between;
 }
 
+/* 1.1 Capoo & Rabbit */
 .capoo_header_img,
 .rabbit_header_img {
   width: 10vh;
@@ -68,9 +71,18 @@ button:disabled {
   margin-left: 0%;
 }
 
+.capoo-header1,
+.rabbit-header1 {
+  width: 40%;
+  align-self: center;
+  display: flex;
+}
+
 .rabbit_header_img {
   order: 1;
 }
+
+/* 1.2 healthbar */
 
 .healthbar {
   width: 100%;
@@ -80,23 +92,34 @@ button:disabled {
   background: #fde5e5;
 }
 
-.round {
-  width: 20%;
-  align-self: center;
-  font-size: 55px;
-}
-
 .healthbar__value {
   background-color: skyblue;
   width: 100%;
   height: 100%;
 }
 
-.capoo-header1,
-.rabbit-header1 {
-  width: 40%;
+.round {
+  width: 20%;
   align-self: center;
+  font-size: 55px;
+}
+
+/* 2. deal with article  */
+
+.container_article {
+  height: 50vh;
   display: flex;
+  justify-content: center;
+  background: #fde5e5;
+}
+
+/* 2.1 Capoo & Rabbit */
+
+.capoo_article_img,
+.rabbit_article_img {
+  width: 40vh;
+  min-width: 0;
+  height: auto;
 }
 
 .who_capoo_win,
@@ -110,19 +133,30 @@ button:disabled {
   justify-content: flex-end;
 }
 
-.container_article {
-  height: 50vh;
-  display: flex;
-  justify-content: center;
-  background: #fde5e5;
+/* win */
+
+.winner {
+  width: 30%;
+  min-width: auto;
+  text-align: center;
+  height: auto;
+  margin-top: 20vh;
 }
 
-.capoo_article_img,
-.rabbit_article_img {
-  width: 40vh;
-  min-width: 0;
-  height: auto;
+.winfont {
+  font-size: 45px;
+  text-align: center;
 }
+
+.btnsize {
+  font-size: 28px;
+  height: 20%;
+  width: 70%;
+}
+
+/*
+  deal with aside  
+*/
 
 .container_aside {
   height: 40vh;
@@ -159,19 +193,6 @@ button:disabled {
   border-radius: 20px;
   overflow-y: auto;
   opacity: 0.9;
-}
-
-.winfont {
-  font-size: 45px;
-  text-align: center;
-}
-
-.winner {
-  width: 30%;
-  min-width: auto;
-  text-align: center;
-  height: auto;
-  margin-top: 20vh;
 }
 
 .capoo_rabbit_font,
@@ -217,12 +238,9 @@ button:disabled {
   color: yellow;
 }
 
-.btnsize {
-  font-size: 28px;
-  height: 20%;
-  width: 70%;
-}
-
+/*
+  deal with RWD
+*/
 @media only screen and (max-width: 643px) {
   .capoo_rabbit_font,
   .attack_font,
