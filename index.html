@@ -36,7 +36,7 @@
       <div style="font-family: 'Times New Roman', Times, serif;" class="who_capoo_win" :style="playerWinLoseStyles">
         {{showgame == 1 ? ( winner === 'player' ? 'WIN' : 'LOSE')
         : ''}}</div>
-      <img :src="img1" class=" capoo_article_img" alt="" />
+      <img :src="img1" class="capoo_article_img" alt="" />
       <div class="winner" v-if="winner">
         <div class="winfont">{{win}}</div>
         <button class="btnsize" @click="startGame">重新開始</button>

@@ -118,6 +118,7 @@ header {
 .capoo_article_img,
 .rabbit_article_img {
   width: 40vh;
+  object-fit: contain;
   min-width: 0;
   height: auto;
 }
