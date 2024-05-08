@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+body {
+  background-image: url("/img/back.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
 h2 {
   font-size: 40px;
   margin: 5px 0 10px 0;
@@ -110,7 +117,7 @@ header {
   height: 50vh;
   display: flex;
   justify-content: center;
-  background: #fde5e5;
+  /* background: #fde5e5; */
 }
 
 /* 2.1 Capoo & Rabbit */
