@@ -1,7 +1,8 @@
 # 網頁Demo
 - GitHub Page：https://chenyu-0721.github.io/monster.github.io/
 # 影片Demo
-![Monster](https://github.com/chenyu-0721/monster.github.io/assets/59197038/0b4c8da3-0f9a-432b-a9a4-ea1cb5d67bf6)
+![monster](https://github.com/chenyu-0721/monster.github.io/assets/59197038/2932998c-bebd-400c-b1f4-b667a1f2bdc8)
+
 
 # 遊戲介紹 
 - 主角為咖波 怪物為兔兔
