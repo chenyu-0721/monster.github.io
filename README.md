@@ -18,10 +18,10 @@
 ![image](https://github.com/chenyu-0721/monster.github.io/assets/59197038/4bd4beab-db29-4dfe-bee4-09d5e1ec52f1)
 
 ### 攻擊畫面
-![未命名1](https://github.com/chenyu-0721/monster.github.io/assets/59197038/2eb2bfd4-00af-4ba9-a0ea-fa3ab4247730)
+<img src="https://github.com/chenyu-0721/monster.github.io/assets/59197038/2eb2bfd4-00af-4ba9-a0ea-fa3ab4247730" width=500px height:500px>
 
 ### 勝利畫面
-![capoowin](https://github.com/chenyu-0721/monster.github.io/assets/59197038/b7036d8b-b829-4e77-b75b-6898d6f04912)
+<img src="https://github.com/chenyu-0721/monster.github.io/assets/59197038/b7036d8b-b829-4e77-b75b-6898d6f04912">
 
 ### 對戰訊息
 <img src="https://github.com/chenyu-0721/monster.github.io/assets/59197038/a14daaab-7953-4cde-9d3f-6f85a8bea962" width=500px height:500px>
