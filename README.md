@@ -16,6 +16,9 @@
 ### 開場畫面
 ![image](https://github.com/chenyu-0721/monster.github.io/assets/59197038/4bd4beab-db29-4dfe-bee4-09d5e1ec52f1)
 
+### 攻擊畫面
+![未命名1](https://github.com/chenyu-0721/monster.github.io/assets/59197038/2eb2bfd4-00af-4ba9-a0ea-fa3ab4247730)
+
 ### 兔子Win
 ![image](https://github.com/chenyu-0721/monster.github.io/assets/59197038/6c08d9e5-a51e-4efb-acc6-04f072eb5ff3)
 
