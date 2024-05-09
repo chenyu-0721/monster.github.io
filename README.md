@@ -21,7 +21,8 @@
 ![未命名1](https://github.com/chenyu-0721/monster.github.io/assets/59197038/2eb2bfd4-00af-4ba9-a0ea-fa3ab4247730)
 
 ### 勝利畫面
-![capoowin](https://github.com/chenyu-0721/monster.github.io/assets/59197038/b88cb358-2439-4499-bd6a-228d96717a11)![rabbit win](https://github.com/chenyu-0721/monster.github.io/assets/59197038/e90b77e6-4a19-4373-b8e4-a60ec7a5bfd6)
+<img src="https://github.com/chenyu-0721/monster.github.io/assets/59197038/b88cb358-2439-4499-bd6a-228d96717a11" style="object-fit: cover; width: 50%; height: 500px;">
+<img src="https://github.com/chenyu-0721/monster.github.io/assets/59197038/e90b77e6-4a19-4373-b8e4-a60ec7a5bfd6" style="object-fit: cover; width: 50%; height: 500px;">
 
 
 ### 對戰訊息
