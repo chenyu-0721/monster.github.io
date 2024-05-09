@@ -79,7 +79,8 @@ GitHub Page：https://chenyu-0721.github.io/monster.github.io/
 
 
 ## 圖片來源
-- [google](https://www.google.com/search?q=%E5%92%96%E6%B3%A2%E5%85%94%E5%85%94&sca_esv=8c425ed6a905ffa8&sca_upv=1&udm=2&biw=1707&bih=847&sxsrf=ADLYWIKxQKCDnaaGNjhZ6NdfYNzVG3fTOQ%3A1715234338110&ei=ImY8ZuSqBo3Bvr0Pw56V0AM&ved=0ahUKEwjkw7fr8f-FAxWNoK8BHUNPBToQ4dUDCBA&uact=5&oq=%E5%92%96%E6%B3%A2%E5%85%94%E5%85%94&gs_lp=Egxnd3Mtd2l6LXNlcnAiDOWSluazouWFlOWFlDIEECMYJzIEECMYJzIFEAAYgAQyBRAAGIAEMgcQABiABBgYMgcQABiABBgYSM8PUNAGWPQNcAF4AJABAJgBNKAB_QKqAQE4uAEDyAEA-AEBmAIEoALEAcICBBAAGAOYAwCIBgGSBwE0oAerEg&sclient=gws-wiz-serp)
+- [google 搜尋咖波兔兔](https://www.google.com/search?q=%E5%92%96%E6%B3%A2%E5%85%94%E5%85%94&sca_esv=8c425ed6a905ffa8&sca_upv=1&udm=2&biw=1707&bih=847&sxsrf=ADLYWIKxQKCDnaaGNjhZ6NdfYNzVG3fTOQ%3A1715234338110&ei=ImY8ZuSqBo3Bvr0Pw56V0AM&ved=0ahUKEwjkw7fr8f-FAxWNoK8BHUNPBToQ4dUDCBA&uact=5&oq=%E5%92%96%E6%B3%A2%E5%85%94%E5%85%94&gs_lp=Egxnd3Mtd2l6LXNlcnAiDOWSluazouWFlOWFlDIEECMYJzIEECMYJzIFEAAYgAQyBRAAGIAEMgcQABiABBgYMgcQABiABBgYSM8PUNAGWPQNcAF4AJABAJgBNKAB_QKqAQE4uAEDyAEA-AEBmAIEoALEAcICBBAAGAOYAwCIBgGSBwE0oAerEg&sclient=gws-wiz-serp)
+- [咖波官方粉絲團](https://www.facebook.com/capoocat/?locale=zh_TW)
 
 ## 關於咖波大戰兔兔
 - 網站名稱：Capoo vs Rabbit
