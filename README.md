@@ -46,7 +46,8 @@
 - 吸取：透過吸取臉頰，使咖波戀愛兔兔，此為特殊攻擊
 
 
-### 其餘遊玩方式，歡迎至Demo頁面遊玩 GitHub Page：https://chenyu-0721.github.io/monster.github.io/
+### 其餘遊玩方式，歡迎至Demo頁面遊玩 
+GitHub Page：https://chenyu-0721.github.io/monster.github.io/
 
 
 ## 圖片來源
