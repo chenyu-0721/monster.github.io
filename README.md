@@ -8,8 +8,10 @@
 ![js](https://github.com/chenyu-0721/monster.github.io/assets/59197038/39419656-8228-4425-a14f-d5b905761dba)
 ![vue](https://github.com/chenyu-0721/monster.github.io/assets/59197038/58c05753-168c-4ec1-a4cf-09f47455f91c)
 
-- HTML
-- CSS
+- HTML和CSS
+
+    使用HTML 和CSS 來建立和樣式化專案的使用者介面，包括佈局、排版和樣式設計。
+- 
 - JavaScript
 - Vue 3.4.9
 
