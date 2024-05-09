@@ -24,8 +24,8 @@
 
 ### 咖波Win
 <div style="display:inline-block">
-![image](https://github.com/chenyu-0721/monster.github.io/assets/59197038/02db48d6-b14d-4f5f-b714-594c6b8b02dd)
-![image](https://github.com/chenyu-0721/monster.github.io/assets/59197038/6c08d9e5-a51e-4efb-acc6-04f072eb5ff3)
+  <img src="(https://github.com/chenyu-0721/monster.github.io/assets/59197038/02db48d6-b14d-4f5f-b714-594c6b8b02dd">
+  <img src="https://github.com/chenyu-0721/monster.github.io/assets/59197038/6c08d9e5-a51e-4efb-acc6-04f072eb5ff3">
 </div>
 
 ### 對戰訊息
