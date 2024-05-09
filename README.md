@@ -8,13 +8,16 @@
 ![js](https://github.com/chenyu-0721/monster.github.io/assets/59197038/39419656-8228-4425-a14f-d5b905761dba)
 ![vue](https://github.com/chenyu-0721/monster.github.io/assets/59197038/58c05753-168c-4ec1-a4cf-09f47455f91c)
 
-- HTML和CSS
-
-    使用HTML 和CSS 來建立和樣式化專案的使用者介面，包括佈局、排版和樣式設計。
-- 
+- HTML和 CSS
+  
+        建立專案的遊戲介面，包括佈局、排版和響應式設計。
 - JavaScript
+
+        編寫了玩家與怪物的戰鬥機制、遊戲流程控制等。
 - Vue 3.4.9
 
+        建立整個前端應用，包括遊戲介面的邏輯和對戰訊息
+  
 ## 前端畫面介紹
 ### 開場畫面
 ![image](https://github.com/chenyu-0721/monster.github.io/assets/59197038/4bd4beab-db29-4dfe-bee4-09d5e1ec52f1)
