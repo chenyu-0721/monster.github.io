@@ -25,6 +25,8 @@
 
 ### 對戰訊息
 <img src="https://github.com/chenyu-0721/monster.github.io/assets/59197038/a14daaab-7953-4cde-9d3f-6f85a8bea962" width=500px height:500px>
+
+
 ## 遊戲介紹 
 - 主角為咖波 怪物為兔兔
 - 當咖波攻擊或恢復，兔兔都會使用普通攻擊對咖波造成傷害
