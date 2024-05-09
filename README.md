@@ -8,15 +8,41 @@
 ![js](https://github.com/chenyu-0721/monster.github.io/assets/59197038/39419656-8228-4425-a14f-d5b905761dba)
 ![vue](https://github.com/chenyu-0721/monster.github.io/assets/59197038/58c05753-168c-4ec1-a4cf-09f47455f91c)
 
-- HTML和 CSS
-  
+### HTML和 CSS
   - 建立專案的遊戲介面，包括佈局、排版和響應式設計。
-- JavaScript
+
+### JavaScript
 
   - 編寫了玩家與怪物的戰鬥機制、遊戲流程控制等。
-- Vue 3.4.9
+    
+### Vue 3.4.9 
+  - 使用數據綁定(Data Binding)動態的去呈現玩家和怪物的健康值、當前回合數、勝利者等。
 
-  - 建立整個前端應用，包括遊戲介面的邏輯和對戰訊息
+        data() {
+          return {
+            playerHealth: 100, // 玩家健康值
+            monsterHealth: 100, // 怪物健康值
+            currentRound: 0, // 當前回合數
+            winner: null, // 勝利者
+            logMessages: [], // 對戰訊息
+            img1: "img/capoo1.png", // 圖片1
+            img2: "img/rabbit.png", // 圖片2
+            game: false, // 遊戲狀態
+          };
+        },
+    
+  - 透過Methods定義多個方法去處理遊戲內不同的操作，例如開始遊戲、攻擊怪物、治癒玩家等。
+
+        methods: {
+          startGame() { /* 開始遊戲 */ },
+          attackMonster() { /* 攻擊怪物 */ },
+          specialAttackMonster() { /* 使用特殊攻擊 */ },
+          healPlayer() { /* 治癒玩家 */ },
+          surrender() { /* 投降 */ },
+          addLogMessage() { /* 添加對戰訊息 */ },
+        },
+
+  
   
 ## 前端畫面介紹
 ### 開場畫面
