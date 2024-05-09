@@ -12,8 +12,6 @@
 - JavaScript
 - Vue 3.4.9
 
-![giphy](https://github.com/chenyu-0721/monster.github.io/assets/59197038/f4c8618a-344c-4cc7-84fc-205f3d191cce)
-
 ## 前端畫面介紹
 ### 開場畫面
 ![image](https://github.com/chenyu-0721/monster.github.io/assets/59197038/4bd4beab-db29-4dfe-bee4-09d5e1ec52f1)
@@ -58,7 +56,7 @@
 
 ## 關於作者
 - 暱稱：點點
-- 狀態：前端一年學習者
+- 狀態：前端開發一年學習者
 - 專業：前端開發、RWD
 - 信箱：chen630602@gmail.com
 
