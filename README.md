@@ -22,7 +22,7 @@
 
 ### 勝利畫面
 <div style="display:inline-block">
-  <img src="https://github.com/chenyu-0721/monster.github.io/assets/59197038/02db48d6-b14d-4f5f-b714-594c6b8b02dd" width="500px" height="500px"><img src="https://github.com/chenyu-0721/monster.github.io/assets/59197038/6c08d9e5-a51e-4efb-acc6-04f072eb5ff3" width="500px" height="500px">
+  <img src="https://github.com/chenyu-0721/monster.github.io/assets/59197038/02db48d6-b14d-4f5f-b714-594c6b8b02dd" width="510px" height="500px"><img src="https://github.com/chenyu-0721/monster.github.io/assets/59197038/6c08d9e5-a51e-4efb-acc6-04f072eb5ff3" width="510px" height="500px">
 </div>
 
 ### 對戰訊息
